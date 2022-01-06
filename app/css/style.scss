@@ -1,0 +1,70 @@
+@import "grid";
+@import "UI";
+@import "media";
+@import "header";
+@import "footer";
+
+$ffLexend: "Lexend", sans-serif;
+$colorBlack: #20233e;
+$colorSilver: #8b8d9b;
+$colorOrange: #eba544;
+$colorBlue: #3c50e0;
+
+// Mixin
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  font-family: $ffLexend;
+  font-weight: 400;
+  font-size: rem(16px);
+  color: $colorSilver;
+  background-color: #e5e5e5;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+}
+#middle {
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+}
+
+#footer {
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

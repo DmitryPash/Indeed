@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "sass": "^1.43.5"
+  }
+}
