@@ -68,3 +68,91 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+.middle {
+  margin-bottom: 270px;
+}
+
+.participate {
+  margin-bottom: 249px;
+  &-title {
+    margin-bottom: 56px;
+    &-h1 {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 70px;
+      color: $colorBlack;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    &-articul {
+      text-align: center;
+      font-size: rem(18px);
+      line-height: 26.4px;
+    }
+  }
+}
+.steps {
+  &-item {
+    min-height: calc(100% - 56px);
+    padding: 0px 40px;
+    margin-bottom: 56px;
+    &-img {
+      text-align: center;
+      height: 174px;
+      margin-bottom: 34px;
+      img {
+        max-height: 174px;
+      }
+    }
+    &-text {
+      text-align: center;
+      &-title {
+        font-size: rem(20px);
+        color: $colorBlack;
+        margin-bottom: 11px;
+      }
+      &-articule {
+        line-height: 25.6px;
+      }
+    }
+  }
+  &-btn {
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 60px;
+    line-height: 60px;
+    background: $colorBlue;
+    text-align: center;
+  }
+}
+.aboutUs {
+  position: relative;
+  &-group {
+    padding: 0px 10px;
+    &-text {
+      margin-bottom: 32px;
+      &-title {
+        font-size: rem(50px);
+        font-weight: 700;
+        color: $colorBlack;
+        margin-bottom: 16px;
+      }
+      &-articule {
+        font-size: rem(18px);
+        line-height: 32.4px;
+        :first-child {
+          margin-bottom: 13px;
+        }
+      }
+    }
+    &-btn {
+      width: 370px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      background: $colorBlue;
+      font-size: rem(18px);
+    }
+  }
+}
