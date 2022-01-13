@@ -12,3 +12,44 @@ $html-font-size: 16px;
 @function rem($pxValue) {
   @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
+
+.footer {
+  padding-top: 69px;
+  padding-bottom: 50px;
+  background-image: url(../images/bg/footer-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &-info {
+    &-content {
+      display: inline-block;
+      color: #ffffff;
+      font-size: rem(14px);
+      border-bottom: 1px solid #ffffff;
+      margin-bottom: 9px;
+    }
+  }
+  &-logo {
+    margin-bottom: 25px;
+  }
+  &-links {
+    margin-bottom: 91px;
+    &-icon {
+      display: inline-block;
+      margin-left: 19px;
+      height: 32px;
+      img {
+        max-height: 32px;
+        width: 32px;
+      }
+    }
+  }
+  &-copyright {
+    font-size: rem(14px);
+  }
+}
+
+.col-footer-links {
+  text-align: right;
+  white-space: nowrap;
+}

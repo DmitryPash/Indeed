@@ -12,3 +12,142 @@ $html-font-size: 16px;
 @function rem($pxValue) {
   @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
 }
+
+.bg-header {
+  background-image: url(../images/bg/section-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 177px;
+}
+
+.bcg-text {
+  position: relative;
+  display: inline-block;
+
+  z-index: 1;
+}
+.bg-yellow {
+  width: 251px;
+  height: 42px;
+  position: absolute;
+  background-image: url(../images/bg/Airpods-bg.svg);
+  z-index: -1;
+  left: -8px;
+  bottom: 0;
+}
+
+.sup {
+  position: absolute;
+  top: -14px;
+  right: -24px;
+  font-size: 30px;
+}
+
+.header {
+  padding: 32px 0px;
+  margin-bottom: 108px;
+  &-logo {
+    height: 40px;
+    img {
+      max-height: 40px;
+    }
+  }
+  &-social {
+    text-align: end;
+    white-space: nowrap;
+    &-item {
+      display: inline-block;
+      height: 40px;
+      margin-left: 17px;
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+}
+.indeed-preview {
+  position: relative;
+  &-solve {
+    margin-bottom: 205px;
+    position: relative;
+    z-index: 2;
+    &-marker {
+      width: 205px;
+      padding: 9px 10px;
+      text-align: center;
+      font-size: rem(18px);
+      font-weight: 500;
+      color: $colorBlue;
+
+      background-color: #ffffff;
+      border-radius: 10px;
+      margin-bottom: 32px;
+    }
+    &-title {
+      padding-right: 15px;
+      font-size: rem(56px);
+      font-weight: 700;
+      line-height: 130%;
+      color: #ffffff;
+      margin-bottom: 17px;
+    }
+    &-text {
+      font-size: rem(24px);
+      font-weight: 400;
+      line-height: 180%;
+      color: #cdd3fa;
+      margin-bottom: 46px;
+    }
+    &-resume {
+      width: 308px;
+      height: 70px;
+      line-height: 70px;
+      background: $colorOrange;
+      text-align: center;
+      color: #ffffff;
+      font-size: rem(20px);
+      font-weight: 600;
+      margin-right: 21px;
+      img {
+        vertical-align: middle;
+      }
+    }
+    &-solve {
+      width: 308px;
+      height: 70px;
+      line-height: 70px;
+      background: #ffffff;
+      text-align: center;
+      color: $colorOrange;
+      font-size: rem(20px);
+      font-weight: 600;
+      margin-right: 21px;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  &-persone {
+    position: absolute;
+    top: -89px;
+    right: -103px;
+  }
+  &-stars {
+    &-left {
+      position: absolute;
+      top: 42px;
+      right: 441px;
+    }
+    &-top {
+      position: absolute;
+      top: -47px;
+      right: -45px;
+    }
+    &-right {
+      position: absolute;
+      top: 181px;
+      right: -165px;
+    }
+  }
+}
