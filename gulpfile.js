@@ -9,6 +9,7 @@ let path = {
     css: dist + "/css/",
     js: dist + "/js/",
     images: dist + "/images/",
+    popups: dist + "/popups/",
     // fonts: dist + "/fonts/"
   },
   src: {
@@ -16,6 +17,7 @@ let path = {
     css: app + "/css/*.scss",
     js: app + "/js/*.js",
     images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+    popups: app + "/popups/*.html",
     // fonts: app + "/fonts/*.ttf"
   },
   watch: {
@@ -23,6 +25,7 @@ let path = {
     css: app + "/css/**/*.scss",
     js: app + "/js/**/*.js",
     images: app + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
+    popups: app + "/popups/*.html",
   },
   clean: "./" + dist + "/",
 };
@@ -83,6 +86,12 @@ function images() {
     .pipe(dest(path.build.images))
     .pipe(browsersync.stream());
 }
+function popups() {
+  return src(path.src.popups)
+    .pipe(fileinclude())
+    .pipe(dest(path.build.popups))
+    .pipe(browsersync.stream());
+}
 
 gulp.task("svgSprite", function () {
   return gulp
@@ -105,9 +114,10 @@ function watchFiles() {
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.images], images);
+  gulp.watch([path.watch.popups], popups);
 }
 
-let build = gulp.series(gulp.parallel(js, css, html, images));
+let build = gulp.series(gulp.parallel(js, css, html, images, popups));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.images = images;
@@ -117,3 +127,4 @@ exports.html = html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
+exports.popups = popups;

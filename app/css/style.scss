@@ -124,6 +124,10 @@ body {
     line-height: 60px;
     background: $colorBlue;
     text-align: center;
+    transition: 0.3s ease;
+    &:hover {
+      background: #3e53f7;
+    }
   }
 }
 .aboutUs {
@@ -147,12 +151,136 @@ body {
       }
     }
     &-btn {
-      width: 370px;
+      // width: 370px;
       height: 60px;
       text-align: center;
       line-height: 60px;
       background: $colorBlue;
       font-size: rem(18px);
+      transition: 0.3s ease;
+      &:hover {
+        background: #4056fc;
+      }
+    }
+    &-input {
+      display: none;
+    }
+  }
+}
+
+.popup-form {
+  background: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  max-width: 770px;
+  padding: 60px 20px 48px 20px;
+  border-radius: 20px;
+  &-img {
+    margin-bottom: 15px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &-title {
+    display: block;
+    font-size: rem(24px);
+    text-align: center;
+    font-weight: 600;
+    color: $colorBlack;
+    max-width: 520px;
+    line-height: 34.8px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &-text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32px;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+  &-btn {
+    display: block;
+    margin: 0 auto;
+    max-width: 340px;
+    height: 60px;
+    line-height: 60px;
+    background: $colorBlue;
+    font-size: rem(16px);
+    font-weight: 600;
+    transition: 0.3s ease;
+    &:hover {
+      background: #4258ff;
+    }
+  }
+}
+.button.mfp-close {
+  background: black;
+}
+
+// popup style
+
+.confirmation {
+  padding: 48px 40px;
+  &-img {
+    margin-bottom: 15px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &-title {
+    display: block;
+    font-size: rem(24px);
+    text-align: center;
+    font-weight: 600;
+    color: $colorBlack;
+    max-width: 520px;
+    line-height: 34.8px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &-text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32px;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+  &-btn {
+    display: block;
+    font-size: 0;
+
+    &-tcs {
+      height: 60px;
+      line-height: 60px;
+      font-size: rem(16px);
+      font-weight: 600;
+      width: 49%;
+      color: $colorBlue;
+      background: #f6f7ff;
+      margin-right: 13px;
+      transition: 0.3s ease;
+      border: 1px solid #dddddd00;
+      &:hover {
+        border: 1px solid $colorBlue;
+      }
+    }
+    &-upload {
+      height: 60px;
+      line-height: 60px;
+      font-size: rem(16px);
+      font-weight: 600;
+      width: 49%;
+      color: #ffffff;
+      background: $colorBlue;
+      transition: 0.3s ease;
+      &:hover {
+        background: #3e53f7;
+      }
     }
   }
 }

@@ -27,6 +27,9 @@ $html-font-size: 16px;
       font-size: rem(14px);
       border-bottom: 1px solid #ffffff;
       margin-bottom: 9px;
+      &:hover {
+        border-bottom: 1px solid #ffffff00;
+      }
     }
   }
   &-logo {
@@ -45,11 +48,11 @@ $html-font-size: 16px;
     }
   }
   &-copyright {
+    color: #ffffff;
     font-size: rem(14px);
   }
 }
 
 .col-footer-links {
   text-align: right;
-  white-space: nowrap;
 }

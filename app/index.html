@@ -24,6 +24,11 @@
       @@include('inc-header.html')
       <div class="middle" id="middle">
          <div class="container">
+            <a class="mfp-link" href="javascript:void(0)" data-href="./popups/warning.html">warning</a>
+            <a class="mfp-link" href="javascript:void(0)" data-href="./popups/confirmation.html">confirmation</a>
+            <a class="mfp-link" href="javascript:void(0)" data-href="./popups/attention.html">attention</a>
+            <a class="mfp-link" href="javascript:void(0)" data-href="./popups/success.html">success</a>
+            <a class="mfp-link" href="javascript:void(0)" data-href="./popups/fail.html">fail</a>
             <div class="participate">
                <div class="participate-title">
                   <div class="participate-title-h1">
@@ -37,7 +42,7 @@
                </div>
                <div class="steps">
                   <div class="row">
-                     <div class="col-4">
+                     <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
                               <img src="./images/icon/step1.png" alt="alt">
@@ -48,7 +53,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-4">
+                     <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
                               <img src="./images/icon/step2.png" alt="alt">
@@ -60,7 +65,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-4">
+                     <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
                               <img src="./images/icon/step3.png" alt="alt">
@@ -73,18 +78,19 @@
                         </div>
                      </div>
                   </div>
-                  <div class="steps-btn ui-btn">Solve the tech puzzle</div>
+                  <a href="#" class="steps-btn ui-btn">Solve the tech puzzle</a>
                </div>
             </div>
             <div class="aboutUs">
                <div class="row">
                   <div class="col-7"></div>
-                  <div class="col-5">
+                  <div class="col-5 col-xs-12">
                      <div class="aboutUs-group">
                         <div class="aboutUs-group-text">
                            <div class="aboutUs-group-text-title">About Us</div>
                            <div class="aboutUs-group-text-articule">
                               <div>
+                                 <p></p>
                                  Indeed is the #1 job site in the world2 with over 28 million
                                  unique visitors3 in India (Indeed + Glassdoor combined) every month.
                               </div>
@@ -93,7 +99,12 @@
                               opportunities.
                            </div>
                         </div>
-                        <div class="aboutUs-group-btn ui-btn">Upload your resume on Indeed </div>
+                        <form enctype="multipart/form-data">
+                           <input id="upload" name="upload" class="aboutUs-group-input" type="file"
+                              value="Upload your resume on Indeed">
+                           <label for="upload" class="aboutUs-group-btn ui-btn">Upload your resume on Indeed</label>
+                        </form>
+                        <!-- <div class="aboutUs-group-btn ui-btn">Upload your resume on Indeed </div> -->
                      </div>
 
                   </div>
