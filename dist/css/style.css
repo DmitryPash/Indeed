@@ -889,6 +889,115 @@ body {
   background: #3e53f7;
 }
 
+.bg-white {
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #20233e;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.bg-pray {
+  background: #f7f7fb;
+  border-radius: 10px;
+}
+
+.content-text {
+  height: 500px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #242424;
+  padding: 20px 40px 0px 20px;
+}
+
+.content-text li {
+  margin-bottom: 16px;
+}
+
+.content-text::-webkit-scrollbar-thumb {
+  background: #3c50e0;
+  border-radius: 10px;
+}
+
+.content-text::-webkit-scrollbar-track {
+  background: #dbe2ef;
+}
+
+.content-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form {
+  padding: 48px 113px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  color: #20233e;
+  line-height: 145%;
+  margin-bottom: 30px;
+}
+
+.form-input img {
+  position: absolute;
+}
+
+.form-input input {
+  border-radius: 4px;
+  border: 1px solid gray;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.form-input input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #8b8d9b;
+}
+
+.form-cheak {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-cheak input {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.form-cheak-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #8b8d9b;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
+
+.form-cheak-text a {
+  font-weight: 600;
+  font-size: 14px;
+  color: #3c50e0;
+}
+
+.form-btn {
+  line-height: 60px;
+  height: 60px;
+  background: #3c50e0;
+}
+
 @media (max-width: 1330px) {
   .col-l-1 {
     -ms-flex: 0 0 8.33333%;
