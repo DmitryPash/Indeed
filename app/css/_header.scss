@@ -18,7 +18,7 @@ $html-font-size: 16px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-  margin-bottom: 177px;
+  margin-bottom: 132px;
 }
 
 .bcg-text {
@@ -114,13 +114,11 @@ $html-font-size: 16px;
       font-size: rem(20px);
       font-weight: 600;
       margin-right: 21px;
-      border: 1px solid #ffffff00;
       transition: 0.3s ease;
       img {
         vertical-align: middle;
       }
       &:hover {
-        border: 1px solid #ffffff;
         background: #ffab36;
       }
     }
@@ -134,25 +132,27 @@ $html-font-size: 16px;
       font-size: rem(20px);
       font-weight: 600;
       margin-right: 21px;
-      border: 1px solid #eba54400;
       transition: 0.3s ease;
       img {
         vertical-align: middle;
       }
       &:hover {
         background: #fafafa;
-        border: 1px solid #eba544;
       }
     }
   }
   &-persone {
     position: relative;
     &-teen {
+      background-image: url(../images/teen+bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
       z-index: 2;
       top: -86px;
       left: -84px;
       width: 653px;
+      height: 670px;
     }
     &-stars {
       &__left {

@@ -21,8 +21,10 @@ $html-font-size: 16px;
   background-size: cover;
   background-position: center;
   &-info {
+    max-width: 350px;
     &-content {
       display: inline-block;
+      
       color: #ffffff;
       font-size: rem(14px);
       border-bottom: 1px solid #ffffff;

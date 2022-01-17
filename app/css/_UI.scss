@@ -63,6 +63,114 @@ textarea {
   text-overflow: ellipsis;
 }
 
+.ui-field {
+  position: relative;
+  margin-bottom: 16px;
+  color: rgb(250, 83, 83);
+}
+
+.ui-input {
+  width: 100%;
+  display: block;
+  height: 50px;
+  border-radius: 10px;
+  border: 1.6px solid #ebecf5;
+  padding-left: 64px;
+  padding-right: 10px;
+  font-size: rem(16px);
+  color: $colorBlack;
+  ::placeholder {
+    font-family: $ffLexend;
+    color: #8b8d9b;
+  }
+}
+.ui-label {
+  position: absolute;
+  top: 14px;
+  left: 28px;
+}
+.checkbox {
+  margin-bottom: 28px;
+  &-link {
+    margin-left: 2px;
+    color: $colorBlue;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.ui-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.ui-checkbox + label {
+  font-size: rem(14px);
+}
+.ui-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #ebecf5;
+  border-radius: 0.25em;
+  margin-right: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.ui-checkbox:checked + label::before {
+  border-color: #0b76ef;
+  background-color: #0b76ef;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+/* hover checkbox */
+.ui-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+/* Active checkbox */
+.ui-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+// Answer btn
+.ui-answer-btn {
+  position: relative;
+  border: 1px solid #ebecf5;
+  border-radius: 10px;
+}
+.ui-answer-btn-num {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: rem(16px);
+  font-weight: 600;
+  color: $colorBlack;
+}
+
+.ui-answer-btn.border > .ui-answer-btn-num {
+  color: red;
+}
+.ui-answer-btn-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.ui-answer-btn-checkbox + .ui-answer-btn-label::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
 input::-webkit-input-placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;

@@ -13,3 +13,24 @@ $(document).on("click", ".mfp-link", function () {
   });
   return false;
 });
+
+// Validation
+
+jQuery.validator.addMethod(
+  "lettersonly",
+  function (value, element) {
+    return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
+  },
+  "Incorrect format"
+);
+
+jQuery.validator.addMethod(
+  "telephone",
+  function (value, element) {
+    return (
+      this.optional(element) ||
+      /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/i.test(value)
+    );
+  },
+  "Incorrect format"
+);
