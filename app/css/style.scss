@@ -68,9 +68,46 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 .middle {
   margin-bottom: 270px;
 }
+// pages.html
+.header-page {
+  background: #5162da;
+}
+.popups-links > ul > li {
+  list-style: outside;
+  margin-left: 20px;
+}
+.popups-links > ul > li > a {
+  &:hover {
+    color: $colorBlue;
+  }
+}
+.popups-links-title {
+  font-size: rem(20px);
+  color: $colorBlack;
+}
+.pages-link {
+  margin-bottom: 15px;
+}
+.pages-link > ul > li {
+  list-style: outside;
+  margin-left: 20px;
+}
+.pages-link-title-main {
+  &:hover {
+    color: $colorBlue;
+  }
+}
+
+.pages-link-title {
+  font-size: rem(20px);
+  color: $colorBlack;
+}
+
+// end pages.html
 
 .participate {
   margin-bottom: 249px;
@@ -85,9 +122,11 @@ body {
       margin-bottom: 15px;
     }
     &-articul {
+      margin: 0 auto;
       text-align: center;
       font-size: rem(18px);
       line-height: 26.4px;
+      max-width: 710px;
     }
   }
 }
@@ -112,6 +151,8 @@ body {
         margin-bottom: 11px;
       }
       &-articule {
+        max-width: 400px;
+        margin: 0 auto;
         line-height: 25.6px;
       }
     }
@@ -168,6 +209,7 @@ body {
   }
 }
 
+// popup style
 .popup-form {
   background: #ffffff;
   position: relative;
@@ -220,8 +262,6 @@ body {
   background: black;
 }
 
-// popup style
-
 .confirmation {
   padding: 48px 40px;
   &-img {
@@ -259,7 +299,6 @@ body {
       line-height: 60px;
       font-size: rem(16px);
       font-weight: 600;
-      width: 49%;
       color: $colorBlue;
       background: #f6f7ff;
       margin-right: 13px;
@@ -274,7 +313,6 @@ body {
       line-height: 60px;
       font-size: rem(16px);
       font-weight: 600;
-      width: 49%;
       color: #ffffff;
       background: $colorBlue;
       transition: 0.3s ease;
@@ -285,28 +323,28 @@ body {
   }
 }
 
-.bg-white {
-  background: #ffffff;
-  border-radius: 20px;
-}
-.title {
+.tcs-title {
   font-size: 24px;
   font-weight: 600;
   color: #20233e;
   text-align: center;
   margin-bottom: 16px;
 }
-.bg-pray {
+.tcs-container {
   background: #f7f7fb;
   border-radius: 10px;
+  margin-bottom: 24px;
 }
-.content-text {
-  height: 500px;
+.tcs-container-content {
+  padding: 20px 16px 20px 20px;
+}
+.tcs-container-content-list {
+  max-height: 584px;
   overflow-y: auto;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 400;
   color: #242424;
-  padding: 20px 40px 0px 20px;
+  line-height: 25.2px;
   li {
     margin-bottom: 16px;
   }
@@ -316,6 +354,7 @@ body {
   }
   &::-webkit-scrollbar-track {
     background: #dbe2ef;
+    border-radius: 40px;
   }
   &::-webkit-scrollbar {
     width: 6px;
@@ -323,7 +362,9 @@ body {
 }
 
 .form {
-  padding: 48px 113px;
+  display: block;
+  margin: 0 auto;
+  max-width: 544px;
 }
 .form-title {
   text-align: center;
@@ -370,7 +411,94 @@ body {
   }
 }
 .form-btn {
+  border: none;
+  max-width: 100%;
   line-height: 60px;
   height: 60px;
   background: #3c50e0;
+}
+
+.form-title {
+  max-width: 420px;
+}
+
+.attention-lab-title {
+  max-width: 475px;
+}
+
+.attention-lab-text {
+  max-width: 630px;
+}
+
+.confirmation-lab-text {
+  max-width: 460px;
+}
+.congratulations-title {
+  max-width: 550px;
+}
+
+// question popups
+
+.question-form {
+  background: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  max-width: 770px;
+  border-radius: 20px;
+}
+
+.question-img {
+  max-height: 430px;
+  margin-bottom: 32px;
+  img {
+    max-height: 430px;
+  }
+}
+.question-container {
+  padding: 0px 32px 32px 32px;
+}
+.question-num {
+  margin-bottom: 12px;
+  &-text {
+    color: $colorBlue;
+    font-weight: 600;
+    padding-right: 20px;
+  }
+  &-dots {
+    &-count {
+      display: inline-block;
+      width: 44px;
+      height: 8px;
+      border-radius: 100px;
+      background: #f2f4ff;
+      margin-left: 12px;
+    }
+  }
+}
+.question-text {
+  line-height: 32px;
+  color: $colorBlack;
+  margin-bottom: 18px;
+}
+.question-btns {
+  margin-bottom: 24px;
+  &-btn {
+    background: none;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #ebecf5;
+    border-radius: 10px;
+    color: $colorBlack;
+  }
+}
+
+// Modificator
+.active {
+  background: $colorBlue;
+}
+.border {
+  border: 1px solid $colorBlue;
+  .ui-answer-btn-num {
+    color: $colorBlue;
+  }
 }

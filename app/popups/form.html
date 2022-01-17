@@ -1,17 +1,62 @@
-<div class="popup-form form">
-   <div class="form-title">Fill out your information to <br> participate in the drawing </div>
-   <div class="form-input">
-      <img src="../images/icon/Profile.svg" alt=""> <input placeholder="Your name" type="text">
-      <img src="../images/icon/Message.svg" alt=""> <input placeholder="yourmail@example.com" type="text">
-      <img src="../images/icon/Call.svg" alt=""> <input placeholder="+0-000-000-0000" type="text">
-      <img src="../images/icon/Calendar.svg" alt=""> <input placeholder="DD/MM/YY (today date)" type="text" name=""
-         id="">
-   </div>
-   <div class="form-cheak">
-      <input type="checkbox" name="" id="">
-      <div class="form-cheak-text">I agree to the processing of personal data and to the <a href="">Terms &
-            Conditions</a>
+<div class="popup-form">
+   <div class="form">
+      <div class="popup-form-title form-title">
+         Fill out your information to participate in the drawing
       </div>
+      <form action="" id="form-validation">
+         <div class="ui-field">
+            <input type="text" placeholder="Your name" name="name" class="ui-input">
+            <label for="name" class="ui-label">
+               <img src="../images/icon/Profile.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" placeholder="yourmail@example.com" name="email" class="ui-input">
+            <label for="email" class="ui-label">
+               <img src="../images/icon/Message.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" placeholder="+0-000-000-0000" name="phone" class="ui-input">
+            <label for="phone" class="ui-label">
+               <img src="../images/icon/Call.svg" alt="alt">
+            </label>
+         </div>
+         <div class="ui-field">
+            <input type="text" placeholder="DD/MM/YY (today date)" name="date" class="ui-input">
+            <label for="date" class="ui-label">
+               <img src="../images/icon/Calendar.svg" alt="alt">
+            </label>
+         </div>
+         <div class="checkbox">
+            <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
+            <label for="checkbox_1">I agree to the processing of personal data and to the <a href="#"
+                  class="checkbox-link"> Terms &
+                  Conditions</a></label>
+         </div>
+         <button class="popup-form-btn form-btn ui-btn" type="submit">Send</button>
+      </form>
    </div>
-   <div class="form-btn ui-btn">Send</div>
+
+   <script>
+      $(document).ready(function () {
+         $("#form-validation").validate({
+            rules: {
+               email: {
+                  required: true,
+                  email: true,
+               },
+               phone: {
+                  required: true,
+                  telephone: true,
+               },
+               name: {
+                  required: true,
+                  lettersonly: true,
+               }
+            },
+         });
+      });
+   </script>
+
 </div>

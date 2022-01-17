@@ -39,6 +39,10 @@
   // Header
   // Middle
   // Footer
+  .footer-info-content {
+    text-decoration: underline;
+    border: none;
+  }
 }
 
 @media (max-width: 576px) {
@@ -46,6 +50,19 @@
   // Header
   // Middle
   // Footer
+  .footer-info {
+    margin-bottom: 40px;
+  }
+  .footer-links {
+    margin-bottom: 20px;
+  }
+  .col-footer-links {
+    text-align: left;
+  }
+  .footer-links-icon {
+    margin-left: 0;
+    margin-right: 19px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -59,6 +76,33 @@
   }
   .indeed-preview-persone-teen {
     width: 443px;
+  }
+  .confirmation {
+    padding: 20px;
+  }
+  .tcs {
+    padding: 30px 10px 43px 10px;
+  }
+  .confirmation-btn-tcs {
+    margin-bottom: 15px;
+  }
+  .header-social {
+    text-align: center;
+  }
+  .header {
+    margin-bottom: 50px;
+    padding: 17px 0px;
+    &-logo {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .header-logo img {
+    display: block;
+    margin: 0 auto;
   }
   // Middle
   // Footer

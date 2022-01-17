@@ -1,0 +1,89 @@
+<div class="question-form question">
+   <div class="question-img">
+      <img src="../images/main-quest.png" alt="alt">
+   </div>
+   <div class="question-container">
+      <div class="question-num flex valign-center space-between">
+         <div class="question-num-text">
+            Question 1 of 7
+         </div>
+         <div class="question-num-dots">
+            <span class="question-num-dots-count active"></span>
+            <span class="question-num-dots-count"></span>
+            <span class="question-num-dots-count"></span>
+            <span class="question-num-dots-count"></span>
+            <span class="question-num-dots-count"></span>
+            <span class="question-num-dots-count"></span>
+            <span class="question-num-dots-count"></span>
+         </div>
+      </div>
+      <div class="question-text">
+         Connect a battery of the required capacity (1500Ah for each job) to the PC. The capacity of each of your
+         batteries is 2000Ah. How many minimum batteries do you need to keep your notebook running until the end of all
+         tasks
+      </div>
+      <form action="">
+         <div class="question-btns">
+            <div class="row">
+               <div class="col-3">
+                  <div class="ui-answer-btn">
+                     <input type="checkbox" class="ui-answer-btn-checkbox" id="question-checkbox"
+                        name="question-checkbox" value="yes">
+                     <label for="question-checkbox" class="ui-answer-btn-label">
+                        <div class="ui-answer-btn-num">3</div>
+                     </label>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="ui-answer-btn">
+                     <input type="checkbox" class="ui-answer-btn-checkbox" id="question-checkbox-4"
+                        name="question-checkbox-4" value="yes">
+                     <label for="question-checkbox-4" class="ui-answer-btn-label">
+                        <div class="ui-answer-btn-num">4</div>
+                     </label>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="ui-answer-btn">
+                     <input type="checkbox" class="ui-answer-btn-checkbox" id="question-checkbox-5"
+                        name="question-checkbox-5" value="yes">
+                     <label for="question-checkbox-5" class="ui-answer-btn-label">
+                        <div class="ui-answer-btn-num">5</div>
+                     </label>
+                  </div>
+               </div>
+               <div class="col-3">
+                  <div class="ui-answer-btn">
+                     <input type="checkbox" class="ui-answer-btn-checkbox" id="question-checkbox-6"
+                        name="question-checkbox-6" value="yes">
+                     <label for="question-checkbox-6" class="ui-answer-btn-label">
+                        <div class="ui-answer-btn-num">6</div>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <a href="#" class="popup-form-btn attention-btn ui-btn">Start now</a>
+      </form>
+
+   </div>
+   <script>
+      // add border
+      let questionbtns = document.querySelectorAll(".ui-answer-btn");
+      questionbtns.forEach((element) => {
+         element.addEventListener("click", () => {
+            clearr();
+            element.classList.add("border");
+            // element.querySelector(".roundclick").classList.add("circleblue");!!!
+         });
+      });
+
+      const clearr = () => {
+         questionbtns.forEach((element) => {
+            element.classList.remove("border");
+            // element.querySelector(".roundclick").classList.remove("circleblue");!!!
+         });
+      };
+
+   </script>
+</div>
