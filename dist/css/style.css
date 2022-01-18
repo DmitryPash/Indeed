@@ -478,8 +478,8 @@ input:focus:-ms-input-placeholder {
   top: 0;
   bottom: 0;
   background: #5b6be2;
-  border-bottom-right-radius: 150% 20%;
-  border-bottom-left-radius: 150% 20%;
+  border-bottom-right-radius: 150% 30%;
+  border-bottom-left-radius: 150% 30%;
 }
 
 .bcg-text {
