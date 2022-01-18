@@ -19,16 +19,17 @@ $html-font-size: 16px;
   background-image: url(../images/bg/footer-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   &-info {
     max-width: 350px;
+    & li {
+      margin-bottom: 9px;
+    }
     &-content {
-      display: inline-block;
-      
       color: #ffffff;
       font-size: rem(14px);
       border-bottom: 1px solid #ffffff;
-      margin-bottom: 9px;
+
       &:hover {
         border-bottom: 1px solid #ffffff00;
       }
