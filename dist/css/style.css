@@ -2071,6 +2071,11 @@ body {
     display: none;
   }
 
+  .bg-header-bg {
+    border-bottom-right-radius: 100% 10%;
+    border-bottom-left-radius: 100% 10%;
+  }
+
   .steps-item-img {
     margin-bottom: 0px;
   }
