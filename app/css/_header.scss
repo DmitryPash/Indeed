@@ -14,11 +14,26 @@ $html-font-size: 16px;
 }
 
 .bg-header {
-  background-image: url(../images/bg/section-bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
+  position: relative;
+  overflow: hidden;
   margin-bottom: 132px;
+  // background-image: url(../images/bg/section-bg.svg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center bottom;
+
+  &-bg {
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+    left: -50px;
+    right: -50px;
+    top: 0;
+    bottom: 0;
+    background: #5b6be2;
+    border-bottom-right-radius: 150% 20%;
+    border-bottom-left-radius: 150% 20%;
+  }
 }
 
 .bcg-text {
@@ -28,11 +43,13 @@ $html-font-size: 16px;
   z-index: 1;
 }
 .bg-yellow {
-  width: 251px;
+  width: 100%;
   height: 42px;
   position: absolute;
   background-image: url(../images/bg/Airpods-bg.svg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   z-index: -1;
   left: -8px;
   bottom: 0;
@@ -49,6 +66,8 @@ $html-font-size: 16px;
   padding: 32px 0px;
   margin-bottom: 108px;
   &-logo {
+    position: relative;
+    top: -5px;
     height: 40px;
     img {
       max-height: 40px;
@@ -67,7 +86,7 @@ $html-font-size: 16px;
     }
   }
 }
-.indeed-preview {
+.top-screen {
   position: relative;
   margin-bottom: 85px;
   &-solve {
@@ -104,8 +123,10 @@ $html-font-size: 16px;
     }
   }
   &-btn {
+    z-index: 2;
+    position: relative;
     &-resume {
-      width: 308px;
+      // max-width: 308px;
       height: 70px;
       line-height: 70px;
       background: $colorOrange;
@@ -113,7 +134,7 @@ $html-font-size: 16px;
       color: #ffffff;
       font-size: rem(20px);
       font-weight: 600;
-      margin-right: 21px;
+
       transition: 0.3s ease;
       img {
         vertical-align: middle;
@@ -123,7 +144,6 @@ $html-font-size: 16px;
       }
     }
     &-solve {
-      width: 308px;
       height: 70px;
       line-height: 70px;
       background: #ffffff;
@@ -131,7 +151,7 @@ $html-font-size: 16px;
       color: $colorOrange;
       font-size: rem(20px);
       font-weight: 600;
-      margin-right: 21px;
+
       transition: 0.3s ease;
       img {
         vertical-align: middle;
@@ -144,49 +164,126 @@ $html-font-size: 16px;
   &-persone {
     position: relative;
     margin-right: -100px;
-    margin-left: -63px;
-    &-teen {
-      background-image: url(../images/teen+bg.svg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      z-index: 2;
-      top: -86px;
-      left: -23px;
-      width: 100%;
-      height: 670px;
-    }
+    margin-left: -92px;
+    position: relative;
+    z-index: 1;
+    top: -86px;
     &-stars {
       &__left {
         position: absolute;
-        top: 41px;
-        left: -5px;
+        top: 130px;
+        left: 23px;
       }
       &__top {
         position: absolute;
-        top: -45px;
+        top: 43px;
         right: 57px;
       }
       &__right {
         position: absolute;
-        top: 181px;
+        top: 269px;
         right: -63px;
+      }
+      &__frame1 {
+        animation: stars 8s ease infinite;
+      }
+      &__frame2 {
+        animation: stars 5s ease infinite;
+      }
+      &__frame3 {
+        animation: stars 12s ease infinite;
       }
     }
   }
 }
 
-.grid-item1 {
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
+.grid {
+  display: grid;
+  grid-template-areas:
+    "text teen"
+    "btns teen";
+  grid-template-columns: 60% 40%;
 }
 
-.grid-item2 {
-  grid-column: 1 / 4;
-  grid-row: 4 / 6;
+.top-screen-text {
+  grid-area: text;
 }
 
-.grid-item3 {
-  grid-column: 4 / 6;
-  grid-row: 1/6;
+.top-screen-btns {
+  grid-area: btns;
+}
+
+.top-screen-teen {
+  grid-area: teen;
+}
+
+.bg-header-bg-item1 {
+  position: absolute;
+  bottom: 0;
+  animation: scale 10s ease infinite;
+}
+.bg-header-bg-item2 {
+  position: absolute;
+  top: 0;
+  animation: scale 9s ease infinite;
+}
+.bg-header-bg-item3 {
+  position: absolute;
+  top: 0;
+  left: 700px;
+  animation: scale 8s ease infinite;
+}
+.bg-header-bg-item4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: scale 7s ease infinite;
+}
+.bg-header-bg-item5 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: scale 12s ease infinite;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1.1) rotate(0.5deg);
+  }
+  25% {
+    transform: scale(1.3) rotate(0.5deg);
+    opacity: 1.1;
+  }
+  50% {
+    transform: scale(1.5) rotate(1deg);
+    opacity: 1.2;
+  }
+  75% {
+    transform: scale(1.3) rotate(1deg);
+    opacity: 1.1;
+  }
+  100% {
+    transform: scale(1.1) rotate(0.2deg);
+  }
+}
+
+@keyframes stars {
+  0% {
+    transform: rotate(5deg);
+  }
+  25% {
+    transform: rotate(7deg);
+    opacity: 1.1;
+  }
+  50% {
+    transform: rotate(10deg);
+    opacity: 1.2;
+  }
+  75% {
+    transform: rotate(7deg);
+    opacity: 1.1;
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
