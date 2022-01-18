@@ -9,6 +9,15 @@
   // Generel
   // Header
   // Middle
+  .aboutUs-picture-bottom {
+    bottom: -31px;
+  }
+  .aboutUs-picture-left {
+    top: 210px;
+  }
+  .aboutUs-picture-top {
+    bottom: 281px;
+  }
   // Footer
 }
 
@@ -31,24 +40,51 @@
     grid-row: 3 / 4;
   }
   // Middle
+  .aboutus-order {
+    order: 2;
+  }
+
+  .aboutUs {
+    margin-bottom: 500px;
+  }
   // Footer
 }
 
 @media (max-width: 768px) {
   // Generel
+  .order {
+    order: 2;
+  }
   // Header
   // Middle
-  // Footer
-  .footer-info-content {
-    text-decoration: underline;
-    border: none;
+  .steps-item-img {
+    margin-bottom: 0px;
   }
+  // Footer
+}
+@media (max-width: 655px) {
+  // Generel
+  // Header
+  // Middle
+  .question-num {
+    flex-direction: column;
+    margin-bottom: 35px;
+    &-text {
+      margin-bottom: 10px;
+    }
+  }
+
+  // Footer
 }
 
 @media (max-width: 576px) {
   // Generel
   // Header
   // Middle
+  .popup-lab {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   // Footer
   .footer-info {
     margin-bottom: 40px;
@@ -105,5 +141,12 @@
     margin: 0 auto;
   }
   // Middle
+  .question-label {
+    margin-bottom: 10px;
+  }
+  .popup-lab {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   // Footer
 }
