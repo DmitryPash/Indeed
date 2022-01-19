@@ -62,7 +62,9 @@
       var element = document.getElementById("imask-input");
       var maskOptions = {
          mask: Date,
-         placeholderChar: 'DD/MM/YY',
+         // placeholderChar: 'DD/MM/YY',
+
+         // placeholderChar: 'asda',
          pattern: 'd/`m/`Y',
          lazy: false,
          blocks: {
@@ -87,7 +89,11 @@
                from: 1900,
                to: 2030,
                maxLength: 4,
-            }
+            },
+            t: {
+               placeholderChar: 'textetxt'
+
+            },
          },
          format: function (date) {
             var day = date.getDate();
@@ -99,7 +105,7 @@
 
             return [day, month, year].join('/');
          },
-         // define str -> date convertion
+
          parse: function (str) {
             var dayMonthYear = str.split('/');
             return new Date(dayMonthYear[2], dayMonthYear[1] - 1, dayMonthYear[0]);

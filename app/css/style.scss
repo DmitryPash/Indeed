@@ -69,9 +69,6 @@ body {
   padding-right: 15px;
 }
 
-.middle {
-  margin-bottom: 270px;
-}
 // pages.html
 .header-page {
   background: #5162da;
@@ -173,7 +170,7 @@ body {
 }
 .aboutUs {
   position: relative;
-
+  margin-bottom: 168px;
   &-group {
     padding: 0px 10px;
     &-text {
@@ -211,17 +208,9 @@ body {
   &-picture {
     position: relative;
     height: 100%;
-    // &-bg {
-    //   position: absolute;
-    //   top: -60px;
-    //   left: 15px;
-    //   z-index: 1;
-    // }
-    &-img {
-      position: absolute;
-      top: -60px;
-      left: 15px;
-    }
+    top: -60px;
+    left: 15px;
+
     &-item {
       background: #ffffff;
       box-shadow: 0px 7.64334px 19.719px rgba(38, 39, 47, 0.0383266),
@@ -231,6 +220,7 @@ body {
       padding: 16px;
       max-width: 312px;
       &-num {
+        position: relative;
         font-size: rem(35px);
         font-weight: 600;
         color: $colorOrange;
@@ -246,10 +236,27 @@ body {
           font-size: rem(10px);
         }
       }
+      &-star__top {
+        position: absolute;
+        top: -49px;
+        left: -46px;
+      }
+      &-star__left {
+        position: absolute;
+        top: -49px;
+        right: -164px;
+      }
+      &-star__bottom {
+        position: absolute;
+        top: -56px;
+        right: -251px;
+      }
     }
+
     &-top {
       position: absolute;
       right: 0px;
+      top: 14px;
     }
     &-left {
       position: absolute;
@@ -259,11 +266,12 @@ body {
     }
     &-bottom {
       position: absolute;
-      bottom: -91px;
+      bottom: -52px;
       left: 129px;
       max-width: 345px;
       padding: 21px;
       &-num {
+        position: relative;
         font-size: rem(42px);
         font-weight: 600;
         color: $colorOrange;
