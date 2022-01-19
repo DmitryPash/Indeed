@@ -17,11 +17,6 @@ $html-font-size: 16px;
   position: relative;
   overflow: hidden;
   margin-bottom: 132px;
-  // background-image: url(../images/bg/section-bg.svg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center bottom;
-
   &-bg {
     position: absolute;
     overflow: hidden;
@@ -31,8 +26,8 @@ $html-font-size: 16px;
     top: 0;
     bottom: 0;
     background: #5b6be2;
-    border-bottom-right-radius: 150% 20%;
-    border-bottom-left-radius: 150% 20%;
+    border-bottom-right-radius: 150% 30%;
+    border-bottom-left-radius: 150% 30%;
   }
 }
 
