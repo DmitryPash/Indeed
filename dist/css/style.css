@@ -654,8 +654,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .top-screen-persone-stars__frame1 {
-  -webkit-animation: stars 8s ease infinite;
-  animation: stars 8s ease infinite;
+  -webkit-animation: stars 6s ease infinite;
+  animation: stars 6s ease infinite;
 }
 
 .top-screen-persone-stars__frame2 {
@@ -664,8 +664,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .top-screen-persone-stars__frame3 {
-  -webkit-animation: stars 12s ease infinite;
-  animation: stars 12s ease infinite;
+  -webkit-animation: stars 8s ease infinite;
+  animation: stars 8s ease infinite;
 }
 
 .grid {
@@ -786,61 +786,61 @@ input:focus:-ms-input-placeholder {
 
 @-webkit-keyframes stars {
   0% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 
   25% {
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
 
   50% {
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
     opacity: 1.2;
   }
 
   75% {
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
 
   100% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 }
 
 @keyframes stars {
   0% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 
   25% {
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
 
   50% {
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
+    -webkit-transform: rotate(12deg);
+    transform: rotate(12deg);
     opacity: 1.2;
   }
 
   75% {
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
+    -webkit-transform: rotate(9deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
 
   100% {
-    -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
   }
 }
 

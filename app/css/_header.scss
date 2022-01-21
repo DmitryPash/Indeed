@@ -180,13 +180,13 @@ $html-font-size: 16px;
         right: -63px;
       }
       &__frame1 {
-        animation: stars 8s ease infinite;
+        animation: stars 6s ease infinite;
       }
       &__frame2 {
         animation: stars 5s ease infinite;
       }
       &__frame3 {
-        animation: stars 12s ease infinite;
+        animation: stars 8s ease infinite;
       }
     }
   }
@@ -264,21 +264,21 @@ $html-font-size: 16px;
 
 @keyframes stars {
   0% {
-    transform: rotate(5deg);
+    transform: rotate(7deg);
   }
   25% {
-    transform: rotate(7deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
   50% {
-    transform: rotate(10deg);
+    transform: rotate(12deg);
     opacity: 1.2;
   }
   75% {
-    transform: rotate(7deg);
+    transform: rotate(9deg);
     opacity: 1.1;
   }
   100% {
-    transform: rotate(5deg);
+    transform: rotate(7deg);
   }
 }
