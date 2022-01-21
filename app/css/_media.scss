@@ -189,26 +189,45 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  .aboutUs-picture-item {
-    display: none;
-    padding: 10px;
+  .aboutUs-picture-top {
+    top: 166px;
+  }
+  .aboutUs-picture-item-star__top {
+    top: -32px;
+    left: -21px;
+  }
+  .aboutUs-picture-item-star__left {
+    top: -29px;
+    right: -160px;
+  }
+  .aboutUs-picture-bottom {
+    bottom: 70px;
+  }
+  .aboutUs-picture-item-star__bottom {
+    top: -34px;
+    right: -166px;
   }
   .aboutUs-picture-item {
+    padding: 10px;
+    max-width: 195px;
     &-num {
-      font-size: rem(18px);
+      font-size: rem(14px);
       line-height: 14px;
     }
     &-text {
-      font-size: rem(12px);
+      font-size: rem(10px);
       line-height: 14px;
     }
   }
+  .aboutUs-picture-left {
+    left: -6px;
+  }
   .aboutUs-picture-bottom-num {
-    font-size: rem(18px);
+    font-size: rem(14px);
     line-height: 14px;
   }
   .aboutUs-picture-bottom-text {
-    font-size: rem(12px);
+    font-size: rem(10px);
     line-height: 14px;
   }
   .participate-title-h1 {
@@ -227,6 +246,42 @@
   .footer-links-icon {
     margin-left: 0;
     margin-right: 19px;
+  }
+}
+@media (max-width: 576px) {
+  .aboutUs-picture-top {
+    top: 138px;
+  }
+  .aboutUs-picture-left {
+    top: 79px;
+  }
+  .aboutUs-picture-item-star__top {
+    top: -32px;
+    left: -21px;
+  }
+  .aboutUs-picture-item-star__left {
+    top: -29px;
+    right: -160px;
+  }
+  .aboutUs-picture-bottom {
+    bottom: 70px;
+    bottom: -10px;
+  }
+  .aboutUs-picture-item-star__bottom {
+    top: -34px;
+    right: -166px;
+  }
+  .aboutUs-picture-item {
+    padding: 10px;
+    max-width: 195px;
+    &-num {
+      font-size: rem(14px);
+      line-height: 14px;
+    }
+    &-text {
+      font-size: rem(10px);
+      line-height: 14px;
+    }
   }
 }
 
@@ -308,6 +363,17 @@
     margin-bottom: 80px;
   }
 
+  .aboutUs-picture-item-text {
+    font-size: rem(8px);
+    line-height: 12px;
+  }
+  .aboutUs-picture-item-star__left {
+    right: -137px;
+  }
+  .aboutUs-picture-bottom {
+    left: 27px;
+  }
+
   // Footer
 }
 
@@ -324,5 +390,12 @@
   }
   .aboutUs-group-btn {
     font-size: rem(16px);
+  }
+
+  .aboutUs-picture-bottom-text {
+    font-size: rem(12px);
+  }
+  .aboutUs-picture-item {
+    min-width: 177px;
   }
 }
