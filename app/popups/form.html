@@ -62,26 +62,20 @@
       var element = document.getElementById("imask-input");
       var maskOptions = {
          mask: Date,
-         // placeholderChar: 'DD/MM/YY',
-
-         // placeholderChar: 'asda',
-         pattern: 'd/`m/`Y',
+         pattern: 'd/`m/`Y t',
          lazy: false,
          blocks: {
             d: {
-               // mask: 'DD',
                placeholderChar: 'D',
                mask: IMask.MaskedRange,
                from: 1,
                to: 31,
-               // maxLength: 2,
             },
             m: {
                placeholderChar: 'M',
                mask: IMask.MaskedRange,
                from: 1,
                to: 12,
-               // maxLength: 2,
             },
             Y: {
                placeholderChar: 'Y',
@@ -91,8 +85,7 @@
                maxLength: 4,
             },
             t: {
-               placeholderChar: 'textetxt'
-
+               mask: '(todаy dаte)',
             },
          },
          format: function (date) {
