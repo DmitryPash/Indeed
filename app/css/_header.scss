@@ -75,8 +75,13 @@ $html-font-size: 16px;
       display: inline-block;
       height: 40px;
       margin-left: 17px;
+
       img {
         max-height: 40px;
+        transition: 0.3s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
@@ -132,6 +137,8 @@ $html-font-size: 16px;
 
       transition: 0.3s ease;
       img {
+        position: relative;
+        bottom: 2px;
         vertical-align: middle;
       }
       &:hover {
@@ -146,14 +153,33 @@ $html-font-size: 16px;
       color: $colorOrange;
       font-size: rem(20px);
       font-weight: 600;
-
       transition: 0.3s ease;
-      img {
-        vertical-align: middle;
+      &:after {
+        content: "»";
+        font-size: rem(30px);
+        position: absolute;
+        opacity: 0;
+        bottom: 3px;
+        right: -20px;
+        transition: 0.5s;
       }
       &:hover {
-        background: #fafafa;
+        padding-right: 24px;
+        padding-left: 8px;
       }
+      &:hover:after {
+        opacity: 1;
+        right: 15px;
+      }
+      img {
+        position: relative;
+        bottom: 2px;
+        vertical-align: middle;
+      }
+      // &:hover {
+      //   font-size: rem(21px);
+      //   background: #fafafa;
+      // }
     }
   }
   &-persone {

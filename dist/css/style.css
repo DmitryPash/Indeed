@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .row {
   display: -webkit-box;
   display: -webkit-inline-box;
@@ -536,6 +538,15 @@ input:focus:-ms-input-placeholder {
 
 .header-social-item img {
   max-height: 40px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header-social-item img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .top-screen {
@@ -598,6 +609,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .top-screen-btn-resume img {
+  position: relative;
+  bottom: 2px;
   vertical-align: middle;
 }
 
@@ -618,12 +631,32 @@ input:focus:-ms-input-placeholder {
   transition: 0.3s ease;
 }
 
-.top-screen-btn-solve img {
-  vertical-align: middle;
+.top-screen-btn-solve:after {
+  content: "»";
+  font-size: 1.875rem;
+  position: absolute;
+  opacity: 0;
+  bottom: 3px;
+  right: -20px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .top-screen-btn-solve:hover {
-  background: #fafafa;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+
+.top-screen-btn-solve:hover:after {
+  opacity: 1;
+  right: 15px;
+}
+
+.top-screen-btn-solve img {
+  position: relative;
+  bottom: 2px;
+  vertical-align: middle;
 }
 
 .top-screen-persone {
@@ -2558,5 +2591,9 @@ body {
 
   .aboutUs-picture-item {
     min-width: 177px;
+  }
+
+  .top-screen-btn-solve:hover:after {
+    right: 5px;
   }
 }
