@@ -908,6 +908,8 @@ input:focus:-ms-input-placeholder {
 
 html {
   font-size: 16px;
+  height: 100%;
+  min-height: 100%;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
