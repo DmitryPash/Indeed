@@ -30,7 +30,7 @@
          </div>
          <div class="checkbox">
             <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
-            <label for="checkbox_1">I agree to the processing of personal data and to the <a href="#"
+            <label for="checkbox_1" name="checkbox">I agree to the processing of personal data and to the <a href="#"
                   class="checkbox-link"> Terms &
                   Conditions</a></label>
          </div>
@@ -57,7 +57,11 @@
                date: {
                   required: true,
                   date: true,
+               },
+               checkbox: {
+                  required: true,
                }
+
             },
          });
       });
