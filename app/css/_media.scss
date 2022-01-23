@@ -23,12 +23,13 @@
     bottom: -31px;
   }
   .aboutUs-picture-left {
-    top: 210px;
+    top: 173px;
   }
   .aboutUs-picture-top {
     right: 0px;
-    top: 119px;
+    top: 275px;
   }
+
   // Footer
 }
 
@@ -42,10 +43,12 @@
       "btns";
     grid-template-columns: 1fr;
   }
+  .top-screen-btn {
+    margin-bottom: 45px;
+  }
   .top-screen-persone {
     top: 0;
     margin-left: 0;
-    margin-bottom: 50px;
     top: -55px;
     &-img {
       display: block;
@@ -65,9 +68,7 @@
   .aboutus-order {
     order: 2;
   }
-  .aboutUs {
-    // margin-bottom: 500px;
-  }
+
   .aboutUs-group {
     text-align: center;
     margin-bottom: 50px;
@@ -76,10 +77,12 @@
   .aboutUs-picture-img {
     display: block;
     margin: 0 auto;
+    margin-bottom: 50px;
   }
   .aboutUs-picture {
-    top: 20px;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .participate {
     margin-bottom: 125px;
@@ -185,6 +188,9 @@
     margin-bottom: 15px;
   }
   // Middle
+  .aboutUs {
+    margin-bottom: 0;
+  }
   .popup-lab {
     padding-left: 25px;
     padding-right: 25px;
@@ -193,43 +199,28 @@
     top: 166px;
   }
   .aboutUs-picture-item-star__top {
-    top: -32px;
-    left: -21px;
+    top: -53px;
+    left: -36px;
   }
   .aboutUs-picture-item-star__left {
-    top: -29px;
-    right: -160px;
+    top: -50px;
+    right: -236px;
   }
   .aboutUs-picture-bottom {
     bottom: 70px;
   }
   .aboutUs-picture-item-star__bottom {
-    top: -34px;
-    right: -166px;
+    top: -58px;
+    right: 50px;
   }
   .aboutUs-picture-item {
     padding: 10px;
     max-width: 195px;
-    &-num {
-      font-size: rem(14px);
-      line-height: 14px;
-    }
-    &-text {
-      font-size: rem(10px);
-      line-height: 14px;
-    }
   }
   .aboutUs-picture-left {
     left: -6px;
   }
-  .aboutUs-picture-bottom-num {
-    font-size: rem(14px);
-    line-height: 14px;
-  }
-  .aboutUs-picture-bottom-text {
-    font-size: rem(10px);
-    line-height: 14px;
-  }
+
   .participate-title-h1 {
     font-size: rem(40px);
   }
@@ -247,51 +238,43 @@
     margin-left: 0;
     margin-right: 19px;
   }
-}
-@media (max-width: 576px) {
-  .aboutUs-picture-top {
-    top: 138px;
+
+  .header {
+    margin-bottom: 50px;
   }
-  .aboutUs-picture-left {
-    top: 79px;
-  }
-  .aboutUs-picture-item-star__top {
-    top: -32px;
-    left: -21px;
-  }
-  .aboutUs-picture-item-star__left {
-    top: -29px;
-    right: -160px;
-  }
-  .aboutUs-picture-bottom {
-    bottom: 70px;
-    bottom: -10px;
-  }
-  .aboutUs-picture-item-star__bottom {
-    top: -34px;
-    right: -166px;
-  }
+
   .aboutUs-picture-item {
-    padding: 10px;
-    max-width: 195px;
-    &-num {
-      font-size: rem(14px);
-      line-height: 14px;
-    }
-    &-text {
-      font-size: rem(10px);
-      line-height: 14px;
-    }
+    position: initial;
+    // min-height: calc(100% - 10px);
+    margin: 0 auto;
+    padding: 20px 17px;
+    max-width: 285px;
+    margin-bottom: 40px;
+  }
+
+  .question-num-dots-count {
+    width: 31px;
+    margin-left: 5px;
+  }
+
+  .aboutUs-group-btn {
+    padding: 19px 24px;
   }
 }
 
 @media (max-width: 400px) {
   // Generel
+  .sup {
+    font-size: rem(22px);
+    right: -14px;
+  }
   // Header
+
   .header-social-item {
     margin-left: 5px;
   }
   .top-screen-solve-title {
+    padding-right: 0;
     font-size: rem(32px);
   }
 
@@ -316,6 +299,7 @@
   .header {
     margin-bottom: 50px;
     padding: 17px 0px;
+    padding-top: 35px;
     &-logo {
       display: block;
       // top: -5px;
@@ -363,15 +347,33 @@
     margin-bottom: 80px;
   }
 
-  .aboutUs-picture-item-text {
-    font-size: rem(8px);
-    line-height: 12px;
-  }
   .aboutUs-picture-item-star__left {
-    right: -137px;
+    right: -237px;
   }
   .aboutUs-picture-bottom {
     left: 27px;
+  }
+
+  .header-social-item {
+    height: 0;
+    position: relative;
+    top: 4px;
+    img {
+      width: 25px;
+    }
+  }
+
+  .aboutUs-group-btn {
+    padding: 19px 11px;
+    font-size: rem(16px);
+  }
+  .tcs-container-content-list {
+    max-height: calc(100vh - 76px);
+  }
+
+  .question-num-dots-count {
+    width: 26px;
+    margin-left: 3px;
   }
 
   // Footer
@@ -386,7 +388,7 @@
   }
   .top-screen-persone-stars__right {
     right: 56px;
-    top: 249px;
+    top: 225px;
   }
   .aboutUs-group-btn {
     font-size: rem(16px);
@@ -400,5 +402,17 @@
   }
   .top-screen-btn-solve:hover:after {
     right: 5px;
+  }
+  .participate-header-title {
+    font-size: rem(43px);
+    line-height: 53px;
+  }
+
+  .aboutUs-group-btn {
+    padding: 16px 7px;
+    font-size: rem(14px);
+  }
+  .aboutUs-picture-item-star__left {
+    right: -205px;
   }
 }
