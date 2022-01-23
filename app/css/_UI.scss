@@ -62,6 +62,11 @@ textarea {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.ui-btn-icon {
+  position: relative;
+  top: 5px;
+  vertical-align: middle;
+}
 
 .ui-field {
   position: relative;

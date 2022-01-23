@@ -39,8 +39,9 @@ body {
   font-family: $ffLexend;
   font-weight: 400;
   font-size: rem(16px);
+  // line-height: 1.42px;
   color: $colorSilver;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 }
 
 #wrapper {
@@ -56,6 +57,7 @@ body {
 #middle {
   -webkit-box-flex: 1;
   flex: 1 0 auto;
+  padding-bottom: 50px;
 }
 
 #footer {
@@ -65,10 +67,10 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 // pages.html
@@ -109,10 +111,10 @@ body {
 // end pages.html
 
 .participate {
-  margin-bottom: 249px;
-  &-title {
+  margin-bottom: 240px;
+  &-header {
     margin-bottom: 56px;
-    &-h1 {
+    &-title {
       font-size: 50px;
       font-weight: 700;
       line-height: 70px;
@@ -134,20 +136,151 @@ body {
     min-height: calc(100% - 56px);
     padding: 0px 40px;
     margin-bottom: 56px;
+    &:hover .steps-item-img-group__pen {
+      animation: move-pen 2s infinite;
+    }
+    &:hover .steps-item-img-group__cup {
+      animation: move-cup 2s infinite;
+    }
+    &:hover .steps-item-img-group__star {
+      animation: move-star 1.1s infinite;
+    }
     &-img {
+      position: relative;
       text-align: center;
       height: 174px;
-      margin-bottom: 34px;
-      img {
-        max-height: 174px;
+      margin-bottom: 26px;
+      &-bg__cup {
       }
+      &__bg-item3 {
+        position: relative;
+        z-index: -1;
+        right: 76px;
+      }
+      &-group {
+        display: inline-block;
+        position: relative;
+        height: 150px;
+        &__cup {
+          position: absolute;
+          left: 11px;
+          top: 10px;
+        }
+        &__note {
+          height: 100%;
+        }
+        &__pen {
+          position: absolute;
+          left: 56px;
+          top: 27px;
+        }
+        &__list {
+          position: absolute;
+          max-width: 155px;
+          height: 169px;
+          right: -49px;
+        }
+        &__star {
+          position: relative;
+          z-index: 2;
+        }
+        @keyframes move-pen {
+          0% {
+            transform: translateX(0) rotate(0deg);
+          }
+          10% {
+            transform: translateX(3.5px) rotate(7deg);
+          }
+          20% {
+            transform: translateX(7px) rotate(0deg);
+          }
+          30% {
+            transform: translateX(10.5px) rotate(7deg);
+          }
+          40% {
+            transform: translateX(14px) rotate(0deg);
+          }
+          50% {
+            transform: translateX(17.5px) rotate(7deg);
+          }
+          60% {
+            transform: translateX(21px) rotate(0deg);
+          }
+          70% {
+            transform: translateX(24.5px) rotate(7deg);
+          }
+          80% {
+            transform: translateX(28px) rotate(0deg);
+          }
+          90% {
+            transform: translateX(31.5px) rotate(7deg);
+          }
+          100% {
+            transform: translateX(35px);
+          }
+          // 20%   {
+          //   top: 24px;
+          //   transform: translateX(0px);
+          // }
+          // 50%  { transform: translateX(-5px); }
+          // 100% { transform: translateX(35px); }
+        }
+        @keyframes move-cup {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          20% {
+            transform: rotate(7deg);
+          }
+
+          40% {
+            transform: rotate(0deg);
+          }
+
+          60% {
+            transform: rotate(-7deg);
+          }
+
+          80% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(0deg);
+          }
+          // 20%   {
+          //   top: 24px;
+          //   transform: translateX(0px);
+          // }
+          // 50%  { transform: translateX(-5px); }
+          // 100% { transform: translateX(35px); }
+        }
+        @keyframes move-star {
+          0% {
+            transform: scale(0.99);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(0.99);
+          }
+        }
+      }
+      &-pen {
+        position: absolute;
+      }
+      // img {
+      //   max-height: 174px;
+      // }
     }
     &-text {
       text-align: center;
       &-title {
         font-size: rem(20px);
         color: $colorBlack;
-        margin-bottom: 11px;
+        margin-bottom: 19px;
       }
       &-articule {
         max-width: 400px;
@@ -176,12 +309,12 @@ body {
   &-group {
     padding: 0px 10px;
     &-text {
-      margin-bottom: 32px;
+      margin-bottom: 49px;
       &-title {
         font-size: rem(50px);
         font-weight: 700;
         color: $colorBlack;
-        margin-bottom: 16px;
+        margin-bottom: 17px;
       }
       &-articule {
         font-size: rem(18px);
@@ -192,12 +325,17 @@ body {
       }
     }
     &-btn {
-      max-width: 370px;
-      height: 60px;
+      padding: 19px 44px;
       text-align: center;
-      line-height: 60px;
       background: $colorBlue;
       font-size: rem(18px);
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      border-radius: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       transition: 0.3s ease;
       &:hover {
         background: #4056fc;
@@ -212,7 +350,7 @@ body {
     height: 100%;
     top: -60px;
     left: 15px;
-
+    max-width: 675px;
     &-item {
       background: #ffffff;
       box-shadow: 0px 7.64334px 19.719px rgba(38, 39, 47, 0.0383266),
@@ -259,11 +397,12 @@ body {
     &-top {
       position: absolute;
       right: 0px;
-      top: 14px;
+      top: 210px;
+      // bottom: 200px;
     }
     &-left {
       position: absolute;
-      top: 142px;
+      top: 338px;
       left: -28px;
       max-width: 241px;
     }
@@ -298,7 +437,7 @@ body {
 .popup-form {
   background: #ffffff;
   position: relative;
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 770px;
   padding: 60px 20px 48px 20px;
   border-radius: 20px;
@@ -425,7 +564,8 @@ body {
   padding: 20px 16px 20px 20px;
 }
 .tcs-container-content-list {
-  max-height: 584px;
+  max-height: calc(100vh - 106px);
+  padding-right: 20px;
   overflow-y: auto;
   font-size: rem(14px);
   font-weight: 400;

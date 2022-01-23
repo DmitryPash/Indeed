@@ -78,13 +78,18 @@
                   <div class="row">
                      <div class="col-6 col-xs-12">
                         <a href="#" class="top-screen-btn-resume ui-btn">
-                           <img src="./images/icon/Upload.svg" alt="alt">
+                           <i class="ui-btn-icon">
+                              <img src="./images/icon/Upload.svg" alt="alt">
+                           </i>
+
                            Upload your resume
                         </a>
                      </div>
                      <div class="col-6 col-xs-12">
                         <a href="#" class="top-screen-btn-solve ui-btn">
-                           <img src="./images/icon/PuzzlePiece.svg" alt="alt">
+                           <i class="ui-btn-icon">
+                              <img src="./images/icon/PuzzlePiece.svg" alt="alt">
+                           </i>
                            Solve the tech puzzle
                         </a>
                      </div>
@@ -95,7 +100,8 @@
             </div>
             <div class="top-screen-teen">
                <div class="top-screen-persone">
-                  <img src="./images/teen+bg.svg" class="top-screen-persone-img" alt="alt">
+                  <img src="./images/top-screen.png" srcset="./images/top-screen@2x.png 2x"
+                     class="top-screen-persone-img" alt="alt">
                   <div class="top-screen-persone-stars">
                      <div class="top-screen-persone-stars__left">
                         <img src="./images/icon/Star1.png" class="top-screen-persone-stars__frame1" alt="alt">
@@ -117,11 +123,11 @@
          <div class="container">
 
             <div class="participate">
-               <div class="participate-title">
-                  <div class="participate-title-h1">
+               <div class="participate-header">
+                  <div class="participate-header-title">
                      How to participate in this challenge?
                   </div>
-                  <div class="participate-title-articul">Are you a techie looking for an interesting riddle to solve?
+                  <div class="participate-header-articul">Are you a techie looking for an interesting riddle to solve?
                      Well,
                      we have the perfect challenge for you. Solve our riddle and stand a chance to win
                      an airpods<sup>1</sup>.
@@ -132,7 +138,10 @@
                      <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
-                              <img src="./images/icon/step1.png" alt="alt">
+                              <div class="steps-item-img-group">
+                                 <img src="./images/bg/bg-step1.png" class="steps-item-img-bg__cup" alt="alt">
+                                 <img src="./images/icon/Trophy.png" class="steps-item-img-group__cup" alt="alt">
+                              </div>
                            </div>
                            <div class="steps-item-text">
                               <div class="steps-item-text-title">Step 1</div>
@@ -143,7 +152,10 @@
                      <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
-                              <img src="./images/icon/step2.png" alt="alt">
+                              <div class="steps-item-img-group">
+                                 <img src="./images/icon/step-2.png" class="steps-item-img-group__list" alt="alt">
+                                 <img src="./images/icon/star-step2.png" class="steps-item-img-group__star" alt="alt">
+                              </div>
                            </div>
                            <div class="steps-item-text">
                               <div class="steps-item-text-title">Step 2</div>
@@ -155,7 +167,11 @@
                      <div class="col-4 col-sm-12">
                         <div class="steps-item">
                            <div class="steps-item-img">
-                              <img src="./images/icon/step3.png" alt="alt">
+                              <div class="steps-item-img-group">
+                                 <img src="./images/icon/STEP_3z.png" class="steps-item-img-group__note" alt="alt">
+                                 <img src="./images/icon/PEN.png" class="steps-item-img-group__pen" alt="alt">
+                              </div>
+
                            </div>
                            <div class="steps-item-text">
                               <div class="steps-item-text-title">Step 3</div>
@@ -172,7 +188,8 @@
                <div class="row">
                   <div class="col-7 col-md-12 aboutus-order">
                      <div class="aboutUs-picture">
-                        <img src="./images/about-us-teen.png" alt="alt" class="aboutUs-picture-img">
+                        <img src="./images/about-us-teen.png" srcset="./images/about-us-teen@2x.png 2x" alt="alt"
+                           class="aboutUs-picture-img">
 
                         <div class="aboutUs-picture-item flex valign-center aboutUs-picture-top">
                            <div class="aboutUs-picture-item-num">
@@ -227,7 +244,7 @@
                         <form enctype="multipart/form-data">
                            <input id="upload" name="upload" class="aboutUs-group-input" type="file"
                               value="Upload your resume on Indeed">
-                           <label for="upload" class="aboutUs-group-btn ui-btn">Upload your resume on Indeed</label>
+                           <label for="upload" class="aboutUs-group-btn">Upload your resume on Indeed</label>
                         </form>
                         <!-- <div class="aboutUs-group-btn ui-btn">Upload your resume on Indeed </div> -->
                      </div>
@@ -248,13 +265,13 @@
             <div class="footer-info">
                <ul>
                   <li>
-                     <a href="#" class="footer-info-content"><sup>1</sup>Terms & Conditions apply</a>
+                     <a href="#"><sup>1</sup>Terms & Conditions apply</a>
                   </li>
                   <li>
-                     <a href="#" class="footer-info-content"><sup>2</sup>comScore, Total Visits, March 2021</a>
+                     <a href="#"><sup>2</sup>comScore, Total Visits, March 2021</a>
                   </li>
                   <li>
-                     <a href="#" class="footer-info-content"><sup>3</sup>SimilarWeb, Average Monthly Total Visits, Q1
+                     <a href="#"><sup>3</sup>SimilarWeb, Average Monthly Total Visits, Q1
                         2021
                      </a>
                   </li>
@@ -285,12 +302,10 @@
 
    </div>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js
 "></script>
+<script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
 <script src="https://unpkg.com/imask"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 <script src="./js/main.js"></script>
 </body>
 

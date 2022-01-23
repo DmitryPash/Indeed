@@ -17,7 +17,7 @@
             </label>
          </div>
          <div class="ui-field">
-            <input type="text" placeholder="+0-000-000-0000" name="phone" class="ui-input">
+            <input type="text" placeholder="+0-000-000-0000" name="phone" class="ui-input" id="imask-phone">
             <label for="phone" class="ui-label">
                <img src="./images/icon/Call.svg" alt="alt">
             </label>
@@ -29,8 +29,7 @@
             </label>
          </div>
          <div class="checkbox">
-            <input type="checkbox" class="ui-checkbox" placeholder="DD/MM/YY (today date)" id="checkbox_1"
-               name="checkbox_1" value="yes">
+            <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
             <label for="checkbox_1">I agree to the processing of personal data and to the <a href="#"
                   class="checkbox-link"> Terms &
                   Conditions</a></label>
@@ -54,60 +53,86 @@
                name: {
                   required: true,
                   lettersonly: true,
+               },
+               date: {
+                  required: true,
+                  date: true,
                }
             },
          });
       });
       // iMask
-      var element = document.getElementById("imask-input");
+      var overwriteMask = IMask(
+         document.getElementById('imask-input'),
+         {
+            mask: Date,
+            lazy: false,
+            overwrite: true,
+            thousandsSeparator: '',
+            autofix: true,
+            blocks: {
+               d: { mask: IMask.MaskedRange, placeholderChar: 'D', from: 1, to: 31, maxLength: 2 },
+               m: { mask: IMask.MaskedRange, placeholderChar: 'M', from: 1, to: 12, maxLength: 2 },
+               Y: { mask: IMask.MaskedRange, placeholderChar: 'Y', from: 1900, to: 2999, maxLength: 4 }
+            }
+         }
+      );
+
+      var element = document.getElementById('imask-phone');
       var maskOptions = {
-         mask: Date,
-         pattern: 'd/`m/`Y t',
-         lazy: false,
-         blocks: {
-            d: {
-               placeholderChar: 'D',
-               mask: IMask.MaskedRange,
-               from: 1,
-               to: 31,
-            },
-            m: {
-               placeholderChar: 'M',
-               mask: IMask.MaskedRange,
-               from: 1,
-               to: 12,
-            },
-            Y: {
-               placeholderChar: 'Y',
-               mask: IMask.MaskedRange,
-               from: 1900,
-               to: 2030,
-               maxLength: 4,
-            },
-            t: {
-               mask: '(todаy dаte)',
-            },
-         },
-         format: function (date) {
-            var day = date.getDate();
-            var month = date.getMonth() + 1;
-            var year = date.getFullYear();
-
-            if (day < 10) day = "0" + day;
-            if (month < 10) month = "0" + month;
-
-            return [day, month, year].join('/');
-         },
-
-         parse: function (str) {
-            var dayMonthYear = str.split('/');
-            return new Date(dayMonthYear[2], dayMonthYear[1] - 1, dayMonthYear[0]);
-         },
-         min: new Date(1900, 0, 1),
-         max: new Date(2099, 12, 31),
-
+         placeholder: '+{7}(000)000-00-00',
+         mask: '+{0}(000)000-00-00'
       };
       var mask = IMask(element, maskOptions);
+      // var element = document.getElementById("imask-input");
+      // var maskOptions = {
+      //    mask: Date,
+      //    pattern: 'd/`m/`Y t',
+      //    lazy: false,
+      //    blocks: {
+      //       d: {
+      //          placeholderChar: 'D',
+      //          mask: IMask.MaskedRange,
+      //          from: 1,
+      //          to: 31,
+      //       },
+      //       m: {
+      //          placeholderChar: 'M',
+      //          mask: IMask.MaskedRange,
+      //          from: 1,
+      //          to: 12,
+      //       },
+      //       Y: {
+      //          placeholderChar: 'Y',
+      //          mask: IMask.MaskedRange,
+      //          from: 1900,
+      //          to: 2030,
+      //          maxLength: 4,
+      //       },
+      //       t: {
+      //          mask: '(todаy dаte)',
+      //       },
+      //    },
+      //    format: function (date) {
+      //       var day = date.getDate();
+      //       var month = date.getMonth() + 1;
+      //       var year = date.getFullYear();
+
+      //       if (day < 10) day = "0" + day;
+      //       if (month < 10) month = "0" + month;
+
+      //       return [day, month, year].join('/');
+      //    },
+
+      //    parse: function (str) {
+      //       var dayMonthYear = str.split('/');
+      //       return new Date(dayMonthYear[2], dayMonthYear[1] - 1, dayMonthYear[0]);
+      //    },
+      //    min: new Date(1900, 0, 1),
+      //    max: new Date(2099, 12, 31),
+
+      // };
+      // var mask = IMask(element, maskOptions);
 
 
 
