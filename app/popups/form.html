@@ -23,13 +23,13 @@
             </label>
          </div>
          <div class="ui-field">
-            <input type="text" name="date" class="ui-input" id="imask-input">
+            <input type="text" name="date" class="ui-input" id="imask-input" placeholder="DD/MM/YYYY (today date)">
             <label for="date" class="ui-label">
                <img src="./images/icon/Calendar.svg" alt="alt">
             </label>
          </div>
          <div class="checkbox">
-            <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
+            <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1"  value="yes">
             <label for="checkbox_1" name="checkbox" class="checkbox-form">I agree to the processing of personal data and
                to
                the <a href="#" class="checkbox-link"> Terms &
@@ -65,7 +65,7 @@
                },
                date: {
                   required: true,
-
+                  // date: true,
                },
                checkbox_1: {
                   required: true,
@@ -75,21 +75,22 @@
          });
       });
       // iMask
-      var overwriteMask = IMask(
-         document.getElementById('imask-input'),
-         {
-            mask: Date,
-            lazy: false,
-            overwrite: true,
-            thousandsSeparator: '',
-            autofix: true,
-            blocks: {
-               d: { mask: IMask.MaskedRange, placeholderChar: 'D', from: 1, to: 31, maxLength: 2 },
-               m: { mask: IMask.MaskedRange, placeholderChar: 'M', from: 1, to: 12, maxLength: 2 },
-               Y: { mask: IMask.MaskedRange, placeholderChar: 'Y', from: 1900, to: 2999, maxLength: 4 }
-            }
-         }
-      );
+
+  var overwriteMask = IMask(
+  document.getElementById('imask-input'),
+  {
+    mask: 'd/m/Y',
+   //  lazy: false,
+    overwrite: true,
+    autofix: true,
+    blocks: {
+      d: {mask: IMask.MaskedRange, placeholderChar: 'd', from: 1, to: 31, maxLength: 2},
+      m: {mask: IMask.MaskedRange, placeholderChar: 'm', from: 1, to: 12, maxLength: 2},
+      Y: {mask: IMask.MaskedRange, placeholderChar: 'y', from: 1900, to: 2999, maxLength: 4}
+    }
+  }
+);
+
 
       var element = document.getElementById('imask-phone');
       var maskOptions = {
@@ -97,6 +98,8 @@
          mask: '+{0}(000)000-00-00'
       };
       var mask = IMask(element, maskOptions);
-   </script>
 
+
+
+   </script>
 </div>
