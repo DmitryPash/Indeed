@@ -304,6 +304,9 @@
   .aboutUs-group {
     margin-bottom: 0;
   }
+  span.error-choose {
+    font-size: rem(13px);
+  }
 }
 @media (max-width: 400px) {
   // Generel
@@ -440,6 +443,10 @@
   }
   .top-screen-solve-text {
     font-size: rem(20px);
+  }
+
+  .popup-choose-field {
+    margin-bottom: 30px;
   }
 
   // Footer

@@ -110,6 +110,12 @@ textarea {
   z-index: -1;
   opacity: 0;
 }
+.ui-line {
+  border-top: 1px solid $colorBlue;
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
 .checkbox-form {
   color: #8b8d9b;
   margin-bottom: 5px;
