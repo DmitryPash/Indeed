@@ -2031,52 +2031,78 @@ body {
   font-weight: 400;
 }
 
-/* overlay at start */
+/* MFP Animations
+---------------------------*/
 
-.my-mfp-zoom-in.mfp-bg {
+/* start state */
+
+.my-mfp-zoom-in .zoom-anim-dialog {
   opacity: 0;
-  -webkit-transform: scale(0.5);
-  -ms-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.4s 0.35s;
+  -o-transition: all 0.4s 0.35s;
+  transition: all 0.4s 0.35s;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
 }
 
-/* overlay animate in */
+.delay-back .my-mfp-zoom-in .zoom-anim-dialog,
+.my-mfp-zoom-in .zoom-anim-dialog.delay-back {
+  -webkit-animation-delay: 0s !important;
+  animation-delay: 0s !important;
+  -webkit-transition: all 0.4s 0s;
+  -o-transition: all 0.4s 0s;
+  transition: all 0.4s 0s;
+}
 
-.my-mfp-zoom-in.mfp-bg.mfp-ready {
-  opacity: 0.8;
+/* animate in */
+
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
-/* overlay animate out */
+/* animate out */
 
-.my-mfp-zoom-in.mfp-bg.mfp-removing {
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
   opacity: 0;
 }
 
-/* content at start */
+/* Dark overlay, start state */
 
-.my-mfp-zoom-in.mfp-wrap .mfp-content {
+.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
-/* content animate it */
+/* animate in */
 
-.my-mfp-zoom-in.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
+.mfp-bg.mfp-ready {
+  opacity: 0.7;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
-/* content animate out */
+/* animate out */
 
-.my-mfp-zoom-in.mfp-wrap.mfp-removing .mfp-content {
+.mfp-removing.mfp-bg {
   opacity: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
 }
 
 .active {
