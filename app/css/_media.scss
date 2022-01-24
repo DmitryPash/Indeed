@@ -275,7 +275,7 @@
     margin: 0 auto;
     padding: 20px 17px;
     max-width: 285px;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
   .question-num-dots-count {
@@ -284,15 +284,24 @@
   }
 
   .aboutUs-group-btn {
-    padding: 19px 24px;
+    padding: 0px 24px;
   }
 }
-
+@media (max-width: 476px) {
+  .top-screen-solve-title {
+    font-size: rem(36px);
+  }
+}
 @media (max-width: 400px) {
   // Generel
   .sup {
     font-size: rem(22px);
     right: -14px;
+  }
+  .container {
+    max-width: 1210px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   // Header
 
@@ -390,7 +399,7 @@
   }
 
   .aboutUs-group-btn {
-    padding: 19px 11px;
+    padding: 0px 11px;
     font-size: rem(16px);
   }
   .tcs-container-content-list {
@@ -400,6 +409,18 @@
   .question-num-dots-count {
     width: 26px;
     margin-left: 3px;
+  }
+  .top-screen-btn-resume {
+    font-size: rem(16px);
+  }
+  .top-screen-btn-solve {
+    font-size: rem(16px);
+  }
+  .ui-btn-icon {
+    top: 7px;
+  }
+  .steps-btn {
+    font-size: rem(16px);
   }
 
   // Footer
@@ -435,7 +456,7 @@
   }
 
   .aboutUs-group-btn {
-    padding: 16px 7px;
+    padding: 0px 7px;
     font-size: rem(14px);
   }
   .aboutUs-picture-item-star__left {
