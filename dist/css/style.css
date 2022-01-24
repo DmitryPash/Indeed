@@ -361,6 +361,13 @@ textarea {
   opacity: 0;
 }
 
+.ui-line {
+  border-top: 1px solid #3c50e0;
+  width: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
+
 .checkbox-form {
   color: #8b8d9b;
   margin-bottom: 5px;
@@ -1977,6 +1984,92 @@ body {
   color: #20233e;
 }
 
+.popup-choose-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 30px;
+}
+
+.popup-choose-title {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #20233e;
+  max-width: 520px;
+  line-height: 34.8px;
+  margin: 0 auto;
+  margin-bottom: 38px;
+}
+
+.popup-choose-form {
+  margin-bottom: 30px;
+}
+
+.pop-choose-input {
+  display: inline-block;
+}
+
+.pop-choose-input ::-webkit-input-placeholder {
+  font-size: 1rem;
+  color: #8b8d9b;
+  font-weight: 400;
+}
+
+.pop-choose-input ::-moz-placeholder {
+  font-size: 1rem;
+  color: #8b8d9b;
+  font-weight: 400;
+}
+
+.pop-choose-input :-ms-input-placeholder {
+  font-size: 1rem;
+  color: #8b8d9b;
+  font-weight: 400;
+}
+
+.pop-choose-input ::-ms-input-placeholder {
+  font-size: 1rem;
+  color: #8b8d9b;
+  font-weight: 400;
+}
+
+.pop-choose-input ::placeholder {
+  font-size: 1rem;
+  color: #8b8d9b;
+  font-weight: 400;
+}
+
+span.error-choose {
+  position: absolute;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+}
+
+.winners-title {
+  margin-bottom: 45px;
+}
+
+.winners-img {
+  margin-bottom: 25px;
+}
+
+.winners-group-num {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #20233e;
+}
+
 .popup-lab {
   background: #ffffff;
   position: relative;
@@ -2888,9 +2981,17 @@ body {
   .aboutUs-group {
     margin-bottom: 0;
   }
+
+  span.error-choose {
+    font-size: 0.8125rem;
+  }
 }
 
 @media (max-width: 400px) {
+  .col-us-0 {
+    display: none;
+  }
+
   .col-us-1 {
     -ms-flex: 0 0 8.33333%;
     -webkit-box-flex: 0;
@@ -3128,6 +3229,10 @@ body {
 
   .top-screen-solve-text {
     font-size: 1.25rem;
+  }
+
+  .popup-choose-field {
+    margin-bottom: 30px;
   }
 }
 

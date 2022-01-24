@@ -504,6 +504,9 @@
 }
 
 @media (max-width: 400px) {
+  .col-us-0 {
+    display: none;
+  }
   .col-us-1 {
     -ms-flex: 0 0 8.33333%;
     flex: 0 0 8.33333%;

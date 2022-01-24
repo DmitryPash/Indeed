@@ -1,0 +1,65 @@
+<div class="zoom-anim-dialog popup-form">
+   <div class="popup-form-img">
+      <img src="./images/icon/attention-img.png" alt="alt">
+   </div>
+   <div class="popup-choose-title">
+      Choose winners
+   </div>
+
+   <form action="" class="popup-choose-form" id="form-validation">
+      <div class="popup-choose-row justify-center valign-center">
+         <div class="col-3 col-sm-4 col-xs-5 col-us-12">
+            <div class="ui-field popup-choose-field">
+               <input type="text" placeholder="First ID" name="firstid" class="ui-input pop-choose-input"
+                  id="pop-choose-input">
+               <label for="firstid" class="ui-label">
+                  <img src="./images/icon/Profile.svg" alt="alt">
+               </label>
+
+            </div>
+         </div>
+         <div class="col-1 col-xs-2 col-us-0">
+            <span class="ui-line">
+            </span>
+         </div>
+         <div class="col-3 col-sm-4 col-xs-5 col-us-12">
+            <div class="ui-field popup-choose-field">
+               <input type="text" placeholder="Last ID" name="lastid" class="ui-input pop-choose-input"
+                  id="pop-choose-input">
+               <label for="lastid" class="ui-label">
+                  <img src="./images/icon/Profile.svg" alt="alt">
+               </label>
+
+            </div>
+         </div>
+      </div>
+      <button href="#" class="popup-form-btn ui-btn" type="submit">Pick</button>
+   </form>
+
+
+
+
+
+   <script>
+      $(document).ready(function () {
+         $("#form-validation").validate({
+            errorElement: 'span',
+            errorClass: 'error-choose',
+            rules: {
+               firstid: {
+                  required: true,
+               },
+               lastid: {
+                  required: true,
+               },
+            },
+         });
+      });
+      var element = document.getElementById('pop-choose-input');
+      var maskOptions = {
+         mask: Number,
+      };
+      var mask = IMask(element, maskOptions);
+
+   </script>
+</div>
