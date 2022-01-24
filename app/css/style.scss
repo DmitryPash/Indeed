@@ -772,6 +772,43 @@ body {
   }
 }
 
+// PopUp animation
+/* overlay at start */
+
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transform: scale(0.5);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* overlay animate in */
+.my-mfp-zoom-in.mfp-bg.mfp-ready {
+  opacity: 0.8;
+  transform: scale(1);
+}
+/* overlay animate out */
+.my-mfp-zoom-in.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.my-mfp-zoom-in.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* content animate it */
+.my-mfp-zoom-in.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.my-mfp-zoom-in.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
 // Modificator
 .active {
   background: $colorBlue;
