@@ -2637,6 +2637,10 @@ body {
   .steps-item-img {
     margin-bottom: 0px;
   }
+
+  .participate-header-title {
+    font-size: 2.875rem;
+  }
 }
 
 @media (max-width: 655px) {
@@ -2828,6 +2832,10 @@ body {
     font-size: 2.5rem;
   }
 
+  .participate-header-title {
+    font-size: 2.625rem;
+  }
+
   .footer-info {
     margin-bottom: 40px;
   }
@@ -2870,6 +2878,11 @@ body {
 @media (max-width: 476px) {
   .top-screen-solve-title {
     font-size: 2.25rem;
+  }
+
+  .participate-header-title {
+    font-size: 2.25rem;
+    line-height: 50px;
   }
 }
 
@@ -3072,7 +3085,7 @@ body {
   }
 
   .header-social-item img {
-    width: 25px;
+    width: 40px;
   }
 
   .aboutUs-group-btn {
@@ -3156,5 +3169,9 @@ body {
 
   .aboutUs-picture-item-star__left {
     right: -205px;
+  }
+
+  .header-social-item img {
+    width: 33px;
   }
 }

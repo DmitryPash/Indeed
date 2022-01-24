@@ -159,6 +159,9 @@
   .steps-item-img {
     margin-bottom: 0px;
   }
+  .participate-header-title {
+    font-size: rem(46px);
+  }
   // Footer
 }
 @media (max-width: 655px) {
@@ -250,6 +253,9 @@
   .participate-title-h1 {
     font-size: rem(40px);
   }
+  .participate-header-title {
+    font-size: rem(42px);
+  }
   // Footer
   .footer-info {
     margin-bottom: 40px;
@@ -290,6 +296,10 @@
 @media (max-width: 476px) {
   .top-screen-solve-title {
     font-size: rem(36px);
+  }
+  .participate-header-title {
+    font-size: rem(36px);
+    line-height: 50px;
   }
 }
 @media (max-width: 400px) {
@@ -394,7 +404,7 @@
     position: relative;
     top: 4px;
     img {
-      width: 25px;
+      width: 40px;
     }
   }
 
@@ -466,5 +476,8 @@
   }
   .aboutUs-picture-item-star__left {
     right: -205px;
+  }
+  .header-social-item img {
+    width: 33px;
   }
 }
