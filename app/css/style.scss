@@ -671,6 +671,7 @@ body {
   margin: 0 auto;
   max-width: 770px;
   border-radius: 20px;
+  margin-top: 20px;
 }
 
 .question-img {
@@ -727,6 +728,7 @@ body {
   max-width: 970px;
   padding: 60px 70px 48px 70px;
   border-radius: 20px;
+  margin-top: 20px;
   &-title {
     display: block;
     font-size: 1.5rem;
@@ -776,4 +778,7 @@ body {
   .ui-answer-btn-num {
     color: $colorBlue;
   }
+}
+.error {
+  display: block;
 }

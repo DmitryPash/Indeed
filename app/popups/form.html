@@ -30,8 +30,9 @@
          </div>
          <div class="checkbox">
             <input type="checkbox" class="ui-checkbox" id="checkbox_1" name="checkbox_1" value="yes">
-            <label for="checkbox_1" name="checkbox">I agree to the processing of personal data and to the <a href="#"
-                  class="checkbox-link"> Terms &
+            <label for="checkbox_1" name="checkbox" class="checkbox-form">I agree to the processing of personal data and
+               to
+               the <a href="#" class="checkbox-link"> Terms &
                   Conditions</a></label>
          </div>
          <button class="popup-form-btn form-btn ui-btn" type="submit">Send</button>
@@ -41,6 +42,14 @@
    <script>
       $(document).ready(function () {
          $("#form-validation").validate({
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+               if (element.attr("type") == "checkbox") {
+                  return element.next('label').append(error);
+               }
+
+               error.insertAfter($(element));
+            },
             rules: {
                email: {
                   required: true,
@@ -58,7 +67,7 @@
                   required: true,
                   date: true,
                },
-               checkbox: {
+               checkbox_1: {
                   required: true,
                }
 
@@ -88,58 +97,6 @@
          mask: '+{0}(000)000-00-00'
       };
       var mask = IMask(element, maskOptions);
-      // var element = document.getElementById("imask-input");
-      // var maskOptions = {
-      //    mask: Date,
-      //    pattern: 'd/`m/`Y t',
-      //    lazy: false,
-      //    blocks: {
-      //       d: {
-      //          placeholderChar: 'D',
-      //          mask: IMask.MaskedRange,
-      //          from: 1,
-      //          to: 31,
-      //       },
-      //       m: {
-      //          placeholderChar: 'M',
-      //          mask: IMask.MaskedRange,
-      //          from: 1,
-      //          to: 12,
-      //       },
-      //       Y: {
-      //          placeholderChar: 'Y',
-      //          mask: IMask.MaskedRange,
-      //          from: 1900,
-      //          to: 2030,
-      //          maxLength: 4,
-      //       },
-      //       t: {
-      //          mask: '(todаy dаte)',
-      //       },
-      //    },
-      //    format: function (date) {
-      //       var day = date.getDate();
-      //       var month = date.getMonth() + 1;
-      //       var year = date.getFullYear();
-
-      //       if (day < 10) day = "0" + day;
-      //       if (month < 10) month = "0" + month;
-
-      //       return [day, month, year].join('/');
-      //    },
-
-      //    parse: function (str) {
-      //       var dayMonthYear = str.split('/');
-      //       return new Date(dayMonthYear[2], dayMonthYear[1] - 1, dayMonthYear[0]);
-      //    },
-      //    min: new Date(1900, 0, 1),
-      //    max: new Date(2099, 12, 31),
-
-      // };
-      // var mask = IMask(element, maskOptions);
-
-
-
    </script>
 
 </div>
