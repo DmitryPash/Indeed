@@ -98,7 +98,7 @@ $html-font-size: 16px;
       padding: 13px 10px;
       text-align: center;
       font-size: rem(18px);
-      line-height:  calc(18px / 23.4px);
+      line-height: calc(18px / 23.4px);
       font-weight: 500;
       color: $colorBlue;
 
@@ -119,13 +119,14 @@ $html-font-size: 16px;
       font-weight: 400;
       line-height: 180%;
       color: #cdd3fa;
-      margin-bottom: 46px;
+      // margin-bottom: 46px;
       max-width: 440px;
     }
   }
   &-btn {
     z-index: 2;
     position: relative;
+
     &-resume {
       height: 70px;
       line-height: 70px;
@@ -218,6 +219,7 @@ $html-font-size: 16px;
 }
 
 .top-screen-btns {
+  max-width: 640px;
   grid-area: btns;
 }
 
@@ -308,14 +310,25 @@ $html-font-size: 16px;
   }
 }
 
-
 @keyframes move-top {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 @keyframes move-right {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-15px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
