@@ -85,7 +85,7 @@
     right: 280px;
   }
   .top-screen-persone-stars__right {
-    right: 108px;
+    right: 64px;
   }
   // Middle
   .aboutus-order {
@@ -326,7 +326,7 @@
     margin-bottom: 15px;
   }
   .header-social {
-    text-align: center;
+    text-align: right;
   }
   .bg-header {
     margin-bottom: 50px;
@@ -422,7 +422,12 @@
   .steps-btn {
     font-size: rem(16px);
   }
-
+  .top-screen {
+    margin-bottom: 45px;
+  }
+  .top-screen-solve-text {
+    font-size: rem(20px);
+  }
   // Footer
 }
 
@@ -435,7 +440,7 @@
   }
   .top-screen-persone-stars__right {
     right: 56px;
-    top: 225px;
+    top: 270px;
   }
   .aboutUs-group-btn {
     font-size: rem(16px);
