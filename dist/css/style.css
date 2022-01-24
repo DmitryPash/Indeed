@@ -361,11 +361,20 @@ textarea {
   opacity: 0;
 }
 
-.ui-checkbox + label {
+.checkbox-form {
+  color: #8b8d9b;
+  margin-bottom: 5px;
+}
+
+.checkbox-form .error {
+  color: #fa5353;
+}
+
+.ui-checkbox + .checkbox-form {
   font-size: 0.875rem;
 }
 
-.ui-checkbox + label::before {
+.ui-checkbox + .checkbox-form::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -1019,6 +1028,15 @@ input:focus:-ms-input-placeholder {
   display: inline-block;
   margin-left: 19px;
   height: 32px;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer-links-icon:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .footer-links-icon img {
@@ -1902,6 +1920,7 @@ body {
   margin: 0 auto;
   max-width: 770px;
   border-radius: 20px;
+  margin-top: 20px;
 }
 
 .question-img {
@@ -1962,6 +1981,7 @@ body {
   max-width: 970px;
   padding: 60px 70px 48px 70px;
   border-radius: 20px;
+  margin-top: 20px;
 }
 
 .popup-lab-title {
@@ -2018,6 +2038,10 @@ body {
 
 .border .ui-answer-btn-num {
   color: #3c50e0;
+}
+
+.error {
+  display: block;
 }
 
 @media (max-width: 1330px) {

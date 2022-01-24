@@ -71,7 +71,7 @@ textarea {
 .ui-field {
   position: relative;
   margin-bottom: 16px;
-  color: rgb(250, 83, 83);
+  color: #fa5353;
 }
 
 .ui-input {
@@ -110,10 +110,17 @@ textarea {
   z-index: -1;
   opacity: 0;
 }
-.ui-checkbox + label {
+.checkbox-form {
+  color: #8b8d9b;
+  margin-bottom: 5px;
+}
+.checkbox-form .error {
+  color: #fa5353;
+}
+.ui-checkbox + .checkbox-form {
   font-size: rem(14px);
 }
-.ui-checkbox + label::before {
+.ui-checkbox + .checkbox-form::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
