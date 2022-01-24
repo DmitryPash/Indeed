@@ -602,7 +602,6 @@ input:focus:-ms-input-placeholder {
   font-weight: 400;
   line-height: 180%;
   color: #cdd3fa;
-  margin-bottom: 46px;
   max-width: 440px;
 }
 
@@ -720,6 +719,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .top-screen-btns {
+  max-width: 640px;
   grid-area: btns;
 }
 
@@ -1523,7 +1523,10 @@ body {
 }
 
 .aboutUs-group-btn {
-  padding: 19px 44px;
+  display: inline-block;
+  padding: 0px 44px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   background: #3c50e0;
   font-size: 1.125rem;
@@ -2132,6 +2135,32 @@ body {
   .top-screen-persone {
     margin-right: 0;
   }
+
+  .aboutUs-picture-item-text {
+    line-height: 20px;
+  }
+
+  .aboutUs-picture-item-num {
+    font-size: 1.75rem;
+    margin-right: 12px;
+  }
+
+  .aboutUs-picture-item-star__top {
+    left: -37px;
+  }
+
+  .aboutUs-picture-left {
+    left: -50px;
+  }
+
+  .aboutUs-picture-bottom-num {
+    font-size: 1.75rem;
+    margin-right: 12px;
+  }
+
+  .aboutUs-picture-bottom-text {
+    line-height: 20px;
+  }
 }
 
 @media (max-width: 1170px) {
@@ -2228,7 +2257,8 @@ body {
   }
 
   .aboutUs-picture-bottom {
-    bottom: -31px;
+    bottom: 18px;
+    left: 192px;
   }
 
   .aboutUs-picture-left {
@@ -2238,6 +2268,10 @@ body {
   .aboutUs-picture-top {
     right: 0px;
     top: 275px;
+  }
+
+  .top-screen-solve-text {
+    margin-bottom: 30px;
   }
 }
 
@@ -2385,6 +2419,10 @@ body {
 
   .participate {
     margin-bottom: 125px;
+  }
+
+  .top-screen-btns {
+    max-width: 100%;
   }
 }
 

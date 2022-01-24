@@ -5,6 +5,26 @@
     margin-right: 0;
   }
   // Middle
+  .aboutUs-picture-item-text {
+    line-height: 20px;
+  }
+  .aboutUs-picture-item-num {
+    font-size: rem(28px);
+    margin-right: 12px;
+  }
+  .aboutUs-picture-item-star__top {
+    left: -37px;
+  }
+  .aboutUs-picture-left {
+    left: -50px;
+  }
+  .aboutUs-picture-bottom-num {
+    font-size: rem(28px);
+    margin-right: 12px;
+  }
+  .aboutUs-picture-bottom-text {
+    line-height: 20px;
+  }
 
   // Footer
 }
@@ -20,7 +40,8 @@
   }
   // Middle
   .aboutUs-picture-bottom {
-    bottom: -31px;
+    bottom: 18px;
+    left: 192px;
   }
   .aboutUs-picture-left {
     top: 173px;
@@ -29,7 +50,9 @@
     right: 0px;
     top: 275px;
   }
-
+  .top-screen-solve-text {
+    margin-bottom: 30px;
+  }
   // Footer
 }
 
@@ -86,6 +109,9 @@
   }
   .participate {
     margin-bottom: 125px;
+  }
+  .top-screen-btns {
+    max-width: 100%;
   }
   // Footer
 }
