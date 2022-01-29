@@ -159,23 +159,25 @@
             },
 
             async checkStep(step, x, y, index) {
-               const req = await fetch(`//indeed.farbatest.com/api?type=check&s=${this.step}&x=${x-1}&y=${y-1}`);
-               const answer = await req.json();
-               console.log(answer);
+               // this.pending = true
+               // const req = await fetch(`//indeed.farbatest.com/api?type=check&s=${this.step}&x=${x-1}&y=${y-1}`);
+               // const answer = await req.json();
+               // console.log(answer);
+               // this.pending = false
 
-               if (answer && answer.answer && answer.answer === 'OK') {
-                  this.cells.splice(index+1, 1, {id: index, correct: true})
-                  //увеличиваем шаг
-                  this.step++
-                  this.path.push(index)
-               } else {
-                  this.error = true
-               }
+               // if (answer && answer.answer && answer.answer === 'OK') {
+               //    this.cells.splice(index+1, 1, {id: index, correct: true})
+               //    //увеличиваем шаг
+               //    this.step++
+               //    this.path.push(index)
+               // } else {
+               //    this.error = true
+               // }
 
-               // this.cells.splice(index-1, 1, {id: index, correct: true})
-               // //увеличиваем шаг
-               // this.step++
-               // this.path.push(index)
+               this.cells.splice(index-1, 1, {id: index, correct: true})
+               //увеличиваем шаг
+               this.step++
+               this.path.push(index)
             },
 
             cellClick(n) {
@@ -208,6 +210,7 @@
                   }
                })
                this.error = false
+               this.pending = false
             }
          },
 
