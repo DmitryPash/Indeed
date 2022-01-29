@@ -1,38 +1,225 @@
 <div class="zoom-anim-dialog popup-lab">
+   <div id="labyrinth">
+      <div class="popup-lab-title">
+         Help Divya find the shortest path out of the labyrinth.
+         <div class="popup-lab-title-subtitle">
+            Here is a classic labyrinth challenge. You can use any solution method that is convenient for you.
+         </div>
+      </div>
 
-   <div class="popup-lab-title">
-      Help Divya find the shortest path out of the labyrinth.
-      <div class="popup-lab-title-subtitle">
-         Here is a classic labyrinth challenge. You can use any solution method that is convenient for you.
+      <div class="popup-lab-container">
+         <div class="row row-popup">
+            <div class="popup-col col-6 col-sm-12 order">
+               <div class="labyrinth-wrap">
+
+                  <div class="labyrinth-pending" v-if="pending">
+                     <div class="labyrinth-pending-connent">
+                        <div class="labyrinth-pending-icon"></div>
+                        <div class="labyrinth-pending-msg">Please wait a few seconds</div>
+                     </div>
+                  </div>
+
+                  <div class="labyrinth">
+                     <div class="labyrinth-grid" 
+                        v-for="item in cells"
+                        :class="{wall: wall.includes(item.id)}"
+                        @click.prevent="cellClick(item.id)"
+                     >
+                        <div class="labyrinth-grid-cell"
+                           :class="{correct: item.correct, exit: item.id === endCell}"
+                        ></div>
+                     </div>
+                  </div>
+
+                  <div class="labyrinth-error" v-if="error">
+                     <div class="labyrinth-error-img">
+                        <img src="./images/icon/fail-img.png" alt="The wrong path">
+                     </div>
+                     <div class="labyrinth-error-txt">
+                        <div class="labyrinth-error-title">The wrong path</div>
+                        <div class="labyrinth-error-msg">You could not pass the task, try again</div>
+                     </div>
+                     <div class="labyrinth-error-btn">
+                        <a href="#" class="ui-btn popup-form-btn" @click.preven="refresh">Start again</a>
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+               
+            <div class="popup-col col-6 col-sm-12 ">
+               <div class="popup-lab-description">
+                  <div class="popup-lab-description-title"><img src="./images/icon/bell.png" alt=""> Key things to
+                     remember:</div>
+                  <p class="popup-lab-description-text">The dimension of the labyrinth is 20x20. Divya cannot move into the
+                     cells that are filled i.e. grey in
+                     colour. The unpainted cells are free and she can move around them. At each step, she can step into one
+                     of the free neighboring cells located below, above, to the left or to the right of the selected cell.
+                     The coordinates of the entrance (0,0), the coordinates of the exit (19,17). These are marked as
+                     “Enter” and “Exit”
+                     in the labyrinth.</p>
+               </div>
+               <div class="popup-lab-description">
+                  <div class="popup-lab-description-title"><img src="./images/icon/Pencil.svg" alt="alt"
+                        class="popup-lab-description-img"> Your Job:</div>
+                  <p class="popup-lab-description-text">Calculate the shortest path from the “Entry” to the “Exit” of the
+                     labyrinth and stop the warheads from
+                     exploding.
+                     Good Luck!</p>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 
-   <div class="popup-lab-container">
-      <div class="row row-popup">
-         <div class="popup-col col-6 col-sm-12 order" style="height: 400px; background-color: rgb(253, 233, 141);">
-         </div>
-         <div class="popup-col col-6 col-sm-12 ">
-            <div class="popup-lab-description">
-               <div class="popup-lab-description-title"><img src="./images/icon/bell.svg" alt=""> Key things to
-                  remember:</div>
-               <p class="popup-lab-description-text">The dimension of the labyrinth is 20x20. Divya cannot move into the
-                  cells that are filled i.e. grey in
-                  colour. The unpainted cells are free and she can move around them. At each step, she can step into one
-                  of the free neighboring cells located below, above, to the left or to the right of the selected cell.
-                  The coordinates of the entrance (0,0), the coordinates of the exit (19,17). These are marked as
-                  “Enter” and “Exit”
-                  in the labyrinth.</p>
-            </div>
-            <div class="popup-lab-description">
-               <div class="popup-lab-description-title"><img src="./images/icon/Pencil.svg" alt="alt"
-                     class="popup-lab-description-img"> Your Job:</div>
-               <p class="popup-lab-description-text">Calculate the shortest path from the “Entry” to the “Exit” of the
-                  labyrinth and stop the warheads from
-                  exploding.
-                  Good Luck!</p>
-            </div>
-         </div>
-      </div>
-   </div>
+   <script>
+   const cells = []
+   for (let i = 1; i < 401; i++) {
+      const o = {correct: false}
+      if (i === 1) {o.correct = true}
+      o.id = i
+      cells.push(o)
+   }
 
+   const initLabyrinth = () => {
+      return new Vue({
+         el: '#labyrinth',
+
+         data: {
+            cells: cells,
+            wall: [
+               5,11,
+               22,23,25,27,28,29,31,34,35,36,37,39,
+               45,47,49,51,52,56,57,58,59,60,
+               62,63,64,67,72,74,76,
+               84,85,87,88,89,90,92,94,96,98,100,
+               102,105,110,112,114,116,118,
+               123,126,127,128,130,132,138,139,
+               141,142,143,144,154,155,157,158,
+               166,168,169,170,171,172,173,174,180,
+               182,183,184,186,188,196,198,
+               202,208,210,211,212,214,215,218,220,
+               222,224,225,226,227,228,230,232,234,237,238,
+               242,250,252,254,255,258,259,
+               262,264,265,266,267,268,269,270,272,273,274,277,278,
+               282,295,297,299,
+               302,304,305,306,308,309,310,312,313,314,315,319,
+               322,326,328,334,335,336,337,339,
+               342,344,346,348,350,352,359,
+               362,363,364,365,366,367,368,369,370,371,372,373,374,375,376,377,379,
+               397
+            ],
+            path: [1],
+            rowSize: 20,
+            step: 1,
+            pending: false,
+            error: false,
+            startCell: 0,
+            endCell: 398,
+            isWin: false
+         },
+
+         methods: {
+            createCoords(n) {
+               const isWall = this.wall.includes(n)
+               const isCorrect = this.cells[n-1].correct
+               if (isWall || isCorrect) {
+                  // console.log(isWall)
+                  this.error = true
+               }
+               let y = (n / this.rowSize > 1) ? Math.ceil(n / this.rowSize, 10) : 1;
+               let x = (y <= 1) ? n : 
+                  (n % this.rowSize) !== 0 ? n % this.rowSize : this.rowSize;
+               // console.log(x, y, n)
+
+               return {x,y}
+            },
+
+            isAllowedCell(n, x, y) {
+               const lastCell = this.path.length ? this.path[this.path.length - 1] : 1
+               const nearest = []
+
+               const leftCell = (x > 1) ? n - 1 : null
+               const rightCell = (x < this.rowSize) ? n + 1 : null
+               const topCell = (y > 1) ? n - this.rowSize : null
+               const bottomCell = (y < this.rowSize) ? n + this.rowSize : null
+
+               nearest.push(leftCell,rightCell,topCell,bottomCell)
+               console.log(nearest)
+               let res = false;
+
+               for (let i = 0; i < nearest.length; i++) {
+                  const index = nearest[i]
+                  if (index && this.cells[index - 1].correct) {
+                     return res = true
+                  }
+               }
+               console.log(res)
+               return res
+            },
+
+            async checkStep(step, x, y, index) {
+               const req = await fetch(`//indeed.farbatest.com/api?type=check&s=${this.step}&x=${x-1}&y=${y-1}`);
+               const answer = await req.json();
+               console.log(answer);
+
+               if (answer && answer.answer && answer.answer === 'OK') {
+                  this.cells.splice(index+1, 1, {id: index, correct: true})
+                  //увеличиваем шаг
+                  this.step++
+                  this.path.push(index)
+               } else {
+                  this.error = true
+               }
+
+               // this.cells.splice(index-1, 1, {id: index, correct: true})
+               // //увеличиваем шаг
+               // this.step++
+               // this.path.push(index)
+            },
+
+            cellClick(n) {
+               const {x,y} = this.createCoords(n)
+               console.log(x,y,n)
+
+               const allow = this.isAllowedCell(n,x,y)
+
+               if (allow) {
+                  this.checkStep(this.step, x, y, n)
+               } else {
+                  this.error = true
+               }
+            },
+
+            checkWin(n) {
+               if (this.path.length > 39 && n === this.endCell) {
+                  this.isWin = true
+               }
+            },
+
+            refresh() {
+               this.path = [1]
+               this.step = 1
+               this.cells.forEach((el,index) => {
+                  if (index !== 0) {
+                     el.correct = false
+                  } else {
+                     el.correct = true
+                  }
+               })
+               this.error = false
+            }
+         },
+
+         mounted () {
+            // console.log(this.cells)
+         }
+      })
+   }
+
+   const script = document.createElement('script')
+   script.src = '//cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js'
+   document.body.appendChild(script)
+   script.onload = initLabyrinth
+   </script>
 </div>

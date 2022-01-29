@@ -8,6 +8,7 @@
     "gulp-imagemin": "^7.0.1",
     "gulp-sass": "^5.0.0",
     "gulp-svg-sprite": "^1.5.0",
-    "sass": "^1.43.5"
-  }
+    "sass": "1.32.13"
+  },
+  "dependencies": {}
 }

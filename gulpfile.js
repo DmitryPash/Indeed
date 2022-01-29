@@ -1,4 +1,17 @@
 const autoPrefixer = require("gulp-autoprefixer");
+let { src, dest } = require("gulp"),
+gulp = require("gulp"),
+browsersync = require("browser-sync").create(),
+fileinclude = require("gulp-file-include"),
+scss = require("gulp-sass")(require("sass")),
+// scss = require('gulp-sass'),
+gcmq = require("gulp-group-css-media-queries"),
+svgSprite = require("gulp-svg-sprite"),
+autoprefixer = require("gulp-autoprefixer");
+// const Fiber = require('fibers');
+
+
+// scss.compiler = require('sass')
 
 let dist = "dist",
   app = "app";
@@ -30,14 +43,7 @@ let path = {
   clean: "./" + dist + "/",
 };
 
-let { src, dest } = require("gulp"),
-  gulp = require("gulp"),
-  browsersync = require("browser-sync").create(),
-  fileinclude = require("gulp-file-include"),
-  scss = require("gulp-sass")(require("sass")),
-  gcmq = require("gulp-group-css-media-queries"),
-  svgSprite = require("gulp-svg-sprite"),
-  autoprefixer = require("gulp-autoprefixer");
+
 
 function browserSync(params) {
   browsersync.init({

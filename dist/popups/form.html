@@ -23,7 +23,7 @@
             </label>
          </div>
          <div class="ui-field">
-            <input type="text" name="date" class="ui-input" id="imask-input" placeholder="DD/MM/YYYY (today date)">
+            <input type="text" name="date" class="ui-input" id="imask-input" placeholder="DD/MM/YY (today date)">
             <label for="date" class="ui-label">
                <img src="./images/icon/Calendar.svg" alt="alt">
             </label>
@@ -86,7 +86,7 @@
             blocks: {
                d: { mask: IMask.MaskedRange, placeholderChar: 'd', from: 1, to: 31, maxLength: 2 },
                m: { mask: IMask.MaskedRange, placeholderChar: 'm', from: 1, to: 12, maxLength: 2 },
-               Y: { mask: IMask.MaskedRange, placeholderChar: 'y', from: 1900, to: 2999, maxLength: 4 }
+               Y: { mask: IMask.MaskedRange, placeholderChar: 'y', from: 1, to: 99, maxLength: 2 }
             }
          }
       );

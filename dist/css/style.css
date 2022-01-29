@@ -587,7 +587,7 @@ input:focus:-ms-input-placeholder {
   padding: 13px 10px;
   text-align: center;
   font-size: 1.125rem;
-  line-height: 0.7692307692;
+  line-height: calc(18px / 23.4px);
   font-weight: 500;
   color: #3c50e0;
   background-color: #ffffff;
@@ -2073,11 +2073,10 @@ span.error-choose {
 .popup-lab {
   background: #ffffff;
   position: relative;
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 970px;
   padding: 60px 70px 48px 70px;
   border-radius: 20px;
-  margin-top: 20px;
 }
 
 .popup-lab-title {
@@ -2087,7 +2086,6 @@ span.error-choose {
   font-weight: 600;
   color: #20233e;
   max-width: 660px;
-  line-height: 34.8px;
   margin: 0 auto;
   margin-bottom: 34px;
 }
@@ -2099,7 +2097,7 @@ span.error-choose {
   margin: 0 auto;
   text-align: center;
   font-size: 0.875rem;
-  line-height: 32px;
+  margin-top: 10px;
 }
 
 .popup-lab-description {
@@ -2111,6 +2109,13 @@ span.error-choose {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 10px;
+}
+
+.popup-lab-description-title img {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }
 
 .popup-lab-description-img {
@@ -2212,6 +2217,114 @@ span.error-choose {
 
 .error {
   display: block;
+}
+
+.labyrinth {
+  background: #f6f7ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  letter-spacing: 0;
+}
+
+.labyrinth-wrap {
+  position: relative;
+}
+
+.labyrinth-pending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.labyrinth-grid {
+  width: 5%;
+  border: 1px solid #FFF;
+  text-align: center;
+}
+
+.labyrinth-grid-cell {
+  height: 0;
+  padding-top: 100%;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.labyrinth-grid-cell.exit {
+  background: -o-linear-gradient(136.85deg, #D8A528 6.81%, #EED18B 54.8%, #F6D686 89.87%);
+  background: linear-gradient(313.15deg, #D8A528 6.81%, #EED18B 54.8%, #F6D686 89.87%);
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px #C79D35;
+  box-shadow: inset 0px 0px 0px 1.5px #C79D35;
+}
+
+.labyrinth-grid-cell.correct {
+  background: -o-linear-gradient(136.85deg, #A3B753 6.81%, #B1C271 54.8%, #BDCD80 89.87%);
+  background: linear-gradient(313.15deg, #A3B753 6.81%, #B1C271 54.8%, #BDCD80 89.87%);
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0px 0px 0px 1.5px #859936;
+  box-shadow: inset 0px 0px 0px 1.5px #859936;
+}
+
+.labyrinth-grid.wall {
+  background: #DFE3F7;
+}
+
+.labyrinth-grid.wall .labyrinth-grid-cell {
+  cursor: not-allowed;
+}
+
+.labyrinth-error {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1009;
+  background: #FFF;
+  padding: 45px 30px 40px;
+  text-align: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 3px 24px rgba(79, 96, 214, 0.2);
+  box-shadow: 0px 3px 24px rgba(79, 96, 214, 0.2);
+  font-size: 14px;
+}
+
+.labyrinth-error-img {
+  margin-bottom: 10px;
+}
+
+.labyrinth-error-txt {
+  margin-bottom: 22px;
+}
+
+.labyrinth-error-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.mfp-bg {
+  position: fixed !important;
+  height: 100% !important;
 }
 
 @media (max-width: 1330px) {
@@ -2593,6 +2706,26 @@ span.error-choose {
   }
 }
 
+@media (max-width: 900px) {
+  #labyrinth {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  #labyrinth .col-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #labyrinth .col-6.order {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+}
+
 @media (max-width: 868px) {
   .top-screen-persone-stars__left {
     left: 102px;
@@ -2733,6 +2866,10 @@ span.error-choose {
 
   .participate-header-title {
     font-size: 2.875rem;
+  }
+
+  .popup-lab-description-text {
+    line-height: 1.42;
   }
 }
 
@@ -3233,6 +3370,13 @@ span.error-choose {
 
   .popup-choose-field {
     margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .labyrinth {
+    margin-left: -10px;
+    margin-right: -10px;
   }
 }
 
