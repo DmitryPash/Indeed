@@ -2251,6 +2251,7 @@ span.error-choose {
   height: 100%;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
 }
 
 .labyrinth-grid {
