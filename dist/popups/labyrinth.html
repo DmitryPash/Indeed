@@ -40,24 +40,24 @@
                         <div class="labyrinth-error-msg">You could not pass the task, try again</div>
                      </div>
                      <div class="labyrinth-error-btn">
-                        <a href="#" class="ui-btn popup-form-btn" @click.preven="refresh">Start again</a>
+                        <a href="#" class="ui-btn popup-form-btn" @click.prevent="refresh">Start again</a>
                      </div>
                      
                   </div>
 
-                  <!-- <div class="labyrinth-error" v-if="warning">
+                  <div class="labyrinth-error" v-if="warning">
                      <div class="labyrinth-error-img">
                         <img src="./images/icon/fail-img.png" alt="The wrong path">
                      </div>
                      <div class="labyrinth-error-txt">
                         <div class="labyrinth-error-title">Warning</div>
-                        <div class="labyrinth-error-msg">You could not walk on walls</div>
+                        <div class="labyrinth-error-msg">You could not walk on walls and on filled cells</div>
                      </div>
                      <div class="labyrinth-error-btn">
-                        <a href="#" class="ui-btn popup-form-btn" @click.preven="warning = false">Ок, understand</a>
+                        <a href="#" class="ui-btn popup-form-btn" @click.prevent="warning = false">Ок</a>
                      </div>
                      
-                  </div> -->
+                  </div>
                </div>
             </div>
                
@@ -123,7 +123,8 @@
                error: false,
                startCell: 0,
                endCell: 398,
-               isWin: false
+               isWin: false,
+               warning: false
             },
 
             created() {
@@ -138,12 +139,6 @@
 
             methods: {
                createCoords(n) {
-                  const isWall = this.wall.includes(n)
-                  const isCorrect = this.cells[n-1].correct
-                  if (isCorrect || isWall) {
-                     this.error = true
-                  }
-
                   let y = (n / this.rowSize > 1) ? Math.ceil(n / this.rowSize, 10) : 1;
                   let x = (y <= 1) ? n : 
                      (n % this.rowSize) !== 0 ? n % this.rowSize : this.rowSize;
@@ -197,6 +192,12 @@
                },
 
                cellClick(n) {
+                  const isWall = this.wall.includes(n)
+                  const isCorrect = this.cells[n-1].correct
+                  if (isCorrect || isWall) {
+                     return this.warning = true
+                  }
+
                   const {x,y} = this.createCoords(n)
                   // console.log(x,y,n)
 
